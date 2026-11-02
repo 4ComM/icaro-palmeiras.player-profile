@@ -1,0 +1,937 @@
+<!doctype html><html lang="pt-BR" data-lang="br"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ícaro — Player Profile | 4ComM</title><meta name="description" content="Ícaro, centroavante do Palmeiras Sub-17, 17 anos: 19 gols em 31 jogos no Paulista e no Brasileiro Sub-17 e campeão e artilheiro da Copa Fictor. Player Profile 4ComM."><meta name="robots" content="noindex">
+<link rel="canonical" href="https://4comm.github.io/icaro-palmeiras.player-profile/"><meta property="og:url" content="https://4comm.github.io/icaro-palmeiras.player-profile/"><meta property="og:site_name" content="4ComM"><meta property="og:title" content="Ícaro — Player Profile | 4ComM"><meta property="og:type" content="website"><meta property="og:description" content="Ícaro, Palmeiras under-17s centre-forward, 17: 19 goals in 31 games in the São Paulo and Brazilian U-17 championships, and champion and top scorer of the Copa Fictor. 4ComM Player Profile."><meta property="og:image" content="https://4comm.github.io/icaro-palmeiras.player-profile/assets/og.jpg?v=20261102"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="Ícaro, Palmeiras under-17s centre-forward, 17: 19 goals in 31 games in the São Paulo and Brazilian U-17 championships, and champion and top scorer of the Copa Fictor. 4ComM Player Profile.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>/* Player Profile em telas (4:5). Palco fixo de 1080x1350 px, escalado por --s (JS). Tudo no palco é em px de 1080x1350. Versão corrigida em 31/10/2026 após a conferência independente. */
+:root{--bg:#0a0d14;--panel:#101626;--panel2:#161d31;--line:rgba(255,255,255,.13);--ink:#fff;--grey:#c9d0de;--grey2:#a3aec4;--gold:#d4af37;--gold2:#f0d060;--green:#2fcf8a;--yel:#e8c24a;--amb:#f0a24b;--s:.6;--H:1920}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#05070d;color:var(--ink);font-family:'Poppins',sans-serif;overflow:hidden;-webkit-text-size-adjust:100%}
+a{color:inherit}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.i{display:none}html[data-lang="br"] .i.br,html[data-lang="pt"] .i.pt,html[data-lang="en"] .i.en,html[data-lang="es"] .i.es{display:inline}
+.nb{white-space:nowrap}
+
+/* ---------- visualizador (fora do palco) ---------- */
+.bgblur{position:fixed;inset:-90px;background-size:cover;background-position:50% 30%;filter:blur(50px) brightness(.34) saturate(1.2);z-index:0}
+.app{position:fixed;inset:0;display:flex;flex-direction:column;z-index:1}
+.chrome{flex:none;height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(14px,2vw,30px)}.chrome img{height:22px}
+.lang{display:flex;gap:4px;background:rgba(255,255,255,.1);border-radius:999px;padding:3px}.lang button{font:600 12px 'JetBrains Mono',monospace;letter-spacing:.1em;padding:6px 13px;border-radius:999px;opacity:.75}.lang button.on{background:#fff;color:#070a12;opacity:1}
+.view{flex:1;min-height:0;position:relative;display:flex;align-items:center;justify-content:center}
+.frame{position:relative;flex:none;width:calc(1080px*var(--s));height:calc(var(--H)*1px*var(--s));border-radius:calc(30px*var(--s));overflow:hidden;box-shadow:0 26px 90px rgba(0,0,0,.65)}
+.stage{position:absolute;left:0;top:0;width:1080px;height:calc(var(--H)*1px);transform:scale(var(--s));transform-origin:0 0;background:var(--bg);overflow:hidden}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.14);font-size:30px;line-height:1;display:flex;align-items:center;justify-content:center;z-index:5}.nav:hover{background:rgba(255,255,255,.26)}
+.nav.p{left:calc(50% - 540px*var(--s) - 86px)}.nav.n{right:calc(50% - 540px*var(--s) - 86px)}.nav:disabled{opacity:.25;cursor:default}
+.cap{flex:none;padding:8px 18px 14px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:center;text-align:center}
+.cap .ct{font:600 15px 'Poppins',sans-serif}.cap .t{font:400 13px/1.45 'Poppins',sans-serif;color:var(--grey);flex-basis:100%;order:3}
+.dl{font:600 12px 'JetBrains Mono',monospace;letter-spacing:.1em;padding:7px 14px;border:1px solid rgba(255,255,255,.3);border-radius:999px;text-decoration:none}
+@media (min-width:761px){.cap .t{display:none}}
+@media (max-width:760px){.nav{display:none}.view{flex:none;height:calc(1350px*var(--s) + 10px);align-items:flex-start;padding-top:6px}.cap{padding-top:12px}.cap .ct{font-size:16px;flex-basis:100%}.cap .t{font-size:14px}.chrome{height:46px}.chrome img{height:19px}}
+html.x .bgblur,html.x .chrome,html.x .cap,html.x .nav{display:none}
+html.x .app{position:static}html.x .view{display:block}
+html.x .frame{position:fixed;left:0;top:0;width:1080px;height:1920px;border-radius:0;box-shadow:none}
+html.x .stage{transform:none}html.x .bars,html.x .cnt{display:none}
+
+/* ---------- moldura do palco ---------- */
+.bars{position:absolute;left:64px;right:64px;top:30px;display:flex;gap:8px;z-index:40}
+.bars i{flex:1;height:8px;border-radius:4px;background:rgba(255,255,255,.28);position:relative;overflow:hidden;cursor:pointer}.bars i.d::after,.bars i.c::after{content:"";position:absolute;inset:0;background:#fff}
+.brand{position:absolute;left:64px;right:64px;top:58px;height:56px;display:flex;align-items:center;gap:18px;z-index:40}.brand img{height:34px}
+.brand .nm{font:500 22px 'JetBrains Mono',monospace;letter-spacing:.18em;opacity:.85}.brand .cnt{margin-left:auto;font:500 22px 'JetBrains Mono',monospace;letter-spacing:.14em;opacity:.7}
+.slide{position:absolute;inset:0;display:none;background:radial-gradient(120% 70% at 88% 0%,#16203a,var(--bg) 60%)}.slide.on{display:block}
+.wrap{position:absolute;left:64px;right:64px;top:132px;bottom:60px;display:flex;flex-direction:column;gap:24px}
+.kick{font:500 26px 'JetBrains Mono',monospace;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;flex:none}.kick .m{text-transform:none}
+h2{font:700 56px/1.08 'Poppins',sans-serif;letter-spacing:-.02em;flex:none}
+h2,.impact{text-wrap:balance}.nota,.lead,.t,.gd,.fv,.bul li,.src li,.tpd,.stl{text-wrap:pretty}
+.lead{font:400 33px/1.45 'Poppins',sans-serif;color:var(--grey);flex:none}
+.t{font:400 31px/1.5 'Poppins',sans-serif;color:var(--grey)}.t b{color:#fff;font-weight:600}
+.nota{font:400 23px/1.4 'Poppins',sans-serif;color:var(--grey2);flex:none}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:24px 26px}
+.cr{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;padding:6px;flex:none}.cr img{display:block;width:100%;height:100%;object-fit:contain}.cr.vazio{background:#4b5775}
+.band{flex:none;height:250px;border-radius:30px;background-size:cover;background-position:50% 24%;position:relative;border:1px solid var(--line)}
+.band::after{content:"";position:absolute;inset:0;border-radius:30px;background:linear-gradient(180deg,rgba(7,10,18,0) 45%,rgba(7,10,18,.7))}
+
+/* ---------- 1 capa ---------- */
+.cover .pic{position:absolute;inset:0;background-size:cover;background-position:50% 0}
+.cover .veil{position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,10,18,.97) 0%,rgba(7,10,18,.84) 28%,rgba(7,10,18,0) 58%),linear-gradient(180deg,rgba(7,10,18,.55),rgba(7,10,18,0) 20%)}
+.cover .wrap{justify-content:flex-end;top:128px;bottom:78px;gap:22px}
+.cover .sub{font:500 28px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--gold2);display:flex;align-items:center;gap:16px;background:rgba(7,10,18,.8);padding:8px 24px 8px 10px;border-radius:999px;align-self:flex-start}.cover .sub .cr{width:50px;height:50px}
+.cover h1{font:400 262px/.84 'Bebas Neue',sans-serif;letter-spacing:.01em;margin-left:-6px}
+.impact{font:700 56px/1.13 'Poppins',sans-serif;letter-spacing:-.01em}
+.chips{display:flex;gap:14px;flex-wrap:wrap}.chip{display:inline-flex;align-items:center;gap:14px;font:600 28px 'Poppins',sans-serif;padding:12px 26px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid var(--line)}.chip.gold{background:var(--gold);color:#070a12;border-color:var(--gold)}.chip img{height:36px}
+
+/* ---------- 2 visão geral ---------- */
+.ctx{font:500 22px 'JetBrains Mono',monospace;letter-spacing:.05em;color:var(--gold2);text-transform:uppercase;flex:none;margin-top:-8px}
+.strip6{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;flex:none}.strip6 .c{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:10px 22px;display:flex;flex-direction:column}
+.strip6 b{font:700 50px/1 'Poppins',sans-serif}.strip6 small{font:500 22px/1.2 'JetBrains Mono',monospace;color:var(--grey2);letter-spacing:.03em;text-transform:uppercase;margin-top:4px}
+.hl{display:flex;gap:14px;flex:none}.hc{flex:1;background:linear-gradient(90deg,rgba(212,175,55,.26),rgba(212,175,55,.07));border:1px solid rgba(212,175,55,.5);border-radius:20px;padding:12px 18px;display:flex;align-items:center;gap:14px}
+.hc b{font:400 64px/1 'Bebas Neue',sans-serif;color:var(--gold2)}.hc i{font:600 24px/1.2 'Poppins',sans-serif;font-style:normal}.hc u{display:block;text-decoration:none;font:600 28px/1.15 'Poppins',sans-serif;color:#fff}
+
+/* ---------- 3 ficha ---------- */
+.fcard{flex:none;height:440px;border-radius:30px;background-size:cover;background-position:62% 0;border:1px solid var(--line)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:none}.fc{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:12px 22px}.fc.wide{grid-column:1/-1}
+.fk{font:500 22px 'JetBrains Mono',monospace;color:var(--gold);letter-spacing:.12em;text-transform:uppercase}.fv{font:600 30px/1.25 'Poppins',sans-serif;margin-top:4px}
+
+/* ---------- 4 trajetória ---------- */
+.trilha{display:flex;flex-direction:column;gap:10px;flex:none}
+.tp{display:grid;grid-template-columns:76px 1fr;gap:20px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:8px 22px}.tp.cur{border-color:var(--gold);background:linear-gradient(90deg,rgba(212,175,55,.2),var(--panel))}
+.tpc{width:68px;height:68px;padding:8px}.tpn{font:700 32px/1.1 'Poppins',sans-serif}.tpy{font:500 24px 'JetBrains Mono',monospace;color:var(--gold2);letter-spacing:.06em}.tpd{font:400 25px/1.3 'Poppins',sans-serif;color:var(--grey)}
+.ogt{display:grid;grid-template-columns:minmax(0,1fr) 84px 124px 80px 80px}
+.og{padding:6px 10px;font:500 26px/1.35 'Poppins',sans-serif;border-bottom:1px solid var(--line);display:flex;align-items:center}.og.onum{justify-content:flex-end;font-variant-numeric:tabular-nums}
+.og.h{font:500 22px 'JetBrains Mono',monospace;color:var(--grey2);letter-spacing:.1em;text-transform:uppercase}.og.tot{font-weight:700;color:var(--gold2);border-bottom:0}
+.ck{font:500 22px 'JetBrains Mono',monospace;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}.ck .nu{text-transform:none}
+
+/* ---------- 5 momento ---------- */
+.mg{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;flex:none}
+.gm{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:10px 14px 12px;display:flex;flex-direction:column;align-items:center;gap:6px;position:relative}
+.gm .gh{width:100%;display:flex;justify-content:space-between;gap:6px;font:500 22px 'JetBrains Mono',monospace;color:var(--grey2)}
+.gm .cr{width:66px;height:66px;padding:8px}.gm .res{font:700 40px/1 'Poppins',sans-serif;white-space:nowrap}.gm.V .res{color:var(--green)}.gm.D .res{color:var(--amb)}.gm.E .res{color:var(--grey)}
+.gm .gb{width:100%;height:10px;background:rgba(255,255,255,.13);border-radius:5px;overflow:hidden}.gm .gb i{display:block;height:100%;background:var(--gold)}.gm.sub .gb i{background:#7b86a1}
+.gm .gs{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:0;font:400 22px/1.3 'Poppins',sans-serif;color:var(--grey2)}.gm .gs b{color:#fff;font-weight:700;font-size:28px;margin-right:4px}
+.gm .gh .gol{background:var(--gold);color:#070a12;font-weight:700;border-radius:8px;padding:0 7px}
+
+/* ---------- 6 dispersão ---------- */
+.sc{position:relative;height:600px;margin:20px 26px 56px 70px}.plot{position:relative;width:100%;height:100%;border-left:2px solid var(--line);border-bottom:2px solid var(--line)}
+.q.ok{position:absolute;background:linear-gradient(135deg,rgba(47,207,138,.07),rgba(212,175,55,.15))}.ml{position:absolute;border:0 dashed rgba(255,255,255,.4)}.ml.v{top:0;bottom:0;border-left-width:2px}.ml.h{left:0;right:0;border-top-width:2px}
+.dot{position:absolute;width:15px;height:15px;margin:0 0 -7px -7px;border-radius:50%;background:#56627f;opacity:.9}
+.ponto{position:absolute;width:0;height:0}
+.ponto .cr{position:absolute;left:-26px;top:-26px;width:52px;height:52px;padding:6px;box-shadow:0 2px 12px rgba(0,0,0,.55);z-index:3}
+.ponto .lb{position:absolute;z-index:4;white-space:nowrap;display:flex;flex-direction:column;font:600 26px/1.15 'Poppins',sans-serif;background:rgba(7,10,18,.93);border:1px solid var(--line);border-radius:14px;padding:8px 14px}.ponto .lb b{font:500 22px 'JetBrains Mono',monospace;color:var(--grey2)}
+.ponto.r .lb{left:38px;top:0;transform:translateY(-50%)}.ponto.l .lb{right:38px;top:0;transform:translateY(-50%)}.ponto.b .lb{left:0;top:40px;transform:translateX(-50%)}.ponto.t .lb{left:0;bottom:40px;transform:translateX(-50%)}
+.ponto.eu .cr{left:-35px;top:-35px;width:70px;height:70px;padding:8px;border:5px solid var(--gold)}.ponto.eu.r .lb{left:48px}.ponto.eu.l .lb{right:48px}.ponto.eu.b .lb{top:50px}.ponto.eu.t .lb{bottom:50px}
+.ponto.eu .lb{background:var(--gold);color:#070a12;border-color:var(--gold)}.ponto.eu .lb b{color:#2b2205}
+.ax{position:absolute;font:500 23px 'JetBrains Mono',monospace;color:var(--grey2);letter-spacing:.06em;white-space:nowrap}.ax.x{right:0;bottom:-50px}.ax.y{left:-44px;top:150px;transform:translate(-50%,-50%) rotate(-90deg)}
+.tk{position:absolute;font:500 22px 'JetBrains Mono',monospace;color:var(--grey2);transform:translateX(-50%);white-space:nowrap}.tk.r{transform:translate(-100%,50%)}.tk.h{transform:none;text-align:right}
+
+/* ---------- 7 tiles ---------- */
+.tg2{display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:none}
+.tl{border:1px solid var(--line);border-left:9px solid;border-radius:22px;padding:14px 24px 16px;display:flex;flex-direction:column;gap:6px;min-height:246px}
+.tl.g{border-left-color:var(--green);background:linear-gradient(90deg,rgba(47,207,138,.2),var(--panel) 75%)}.tl.y{border-left-color:var(--yel);background:linear-gradient(90deg,rgba(232,194,74,.18),var(--panel) 75%)}.tl.r{border-left-color:var(--amb);background:linear-gradient(90deg,rgba(240,162,75,.2),var(--panel) 75%)}
+.tl .r1{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;min-height:72px}.tl .tn{font:500 27px/1.2 'Poppins',sans-serif}.tl .tpc2{flex:none;text-align:right}.tl .tp2{font:700 42px/1 'Poppins',sans-serif;white-space:nowrap}.tl .tp2 small{font:500 22px 'JetBrains Mono',monospace;color:var(--grey2)}
+.tl .md{font:500 22px/1.2 'JetBrains Mono',monospace;color:var(--grey2);margin-top:5px;white-space:nowrap}
+.tl.g .tp2{color:var(--green)}.tl.y .tp2{color:var(--yel)}.tl.r .tp2{color:var(--amb)}.tl .tv{font:700 88px/1 'Poppins',sans-serif}
+.strip{position:relative;height:34px;margin-top:auto}.strip .base{position:absolute;left:0;right:0;top:50%;height:2px;background:rgba(255,255,255,.18)}
+.sd{position:absolute;width:11px;height:11px;margin:-5px 0 0 -5px;border-radius:50%;background:#6a7699;opacity:.85}.sd.me{width:26px;height:26px;margin:-13px 0 0 -13px;background:var(--gold);border:4px solid #fff;opacity:1;z-index:3}
+.sm{position:absolute;top:0;bottom:0;width:4px;margin-left:-2px;border-radius:2px;background:#fff;opacity:.9;z-index:2}
+
+/* ---------- 8 radar ---------- */
+.radar{flex:none;width:1040px;height:712px;margin:-16px -32px 0}.radar .ring{fill:none;stroke:rgba(255,255,255,.14);stroke-width:2}.radar .axl{stroke:rgba(255,255,255,.14);stroke-width:2}
+.radar .poly{fill:rgba(212,175,55,.3);stroke:var(--gold);stroke-width:6;stroke-linejoin:round}.radar .vx{fill:var(--gold);stroke:#fff;stroke-width:3}
+.radar text{fill:#fff;font-family:'Poppins',sans-serif}.radar .a1{font-size:27px;font-weight:600}.radar .a2{font-size:25px;font-weight:500;fill:var(--gold2);font-family:'JetBrains Mono',monospace}.radar .rt{font-size:22px;fill:#8f9bb5;font-family:'JetBrains Mono',monospace}
+
+/* ---------- 9 mapa ---------- */
+.mapw{display:grid;grid-template-columns:548px 1fr;gap:34px;flex:none;height:822px}.heat{height:822px;width:548px;background:#0d1322;border-radius:22px;border:1px solid var(--line)}.heat .cl{fill:none;stroke:rgba(255,255,255,.3);stroke-width:1.2}
+.st4{display:flex;flex-direction:column;gap:16px;min-height:0}.st{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:24px 24px 14px;display:flex;flex-direction:column;justify-content:flex-start}.stv{font:700 74px/1 'Poppins',sans-serif;color:var(--gold2)}.stl{font:400 25px/1.3 'Poppins',sans-serif;color:var(--grey)}
+.lgd{flex:none;display:flex;align-items:center;gap:12px;font:500 21px 'JetBrains Mono',monospace;color:var(--grey2)}.lgd i{flex:1;height:14px;border-radius:7px;background:linear-gradient(90deg,rgba(212,175,55,.12),#d4af37)}
+
+/* ---------- 10 lances ---------- */
+.vts{display:flex;gap:10px;flex:none}.vt{flex:1;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:10px 6px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:2px}
+.vt i{font:600 22px/1.15 'Poppins',sans-serif;font-style:normal;text-align:center;min-height:52px;display:flex;align-items:center;justify-content:center}.vt b{font:700 40px/1 'Poppins',sans-serif;color:var(--grey2)}.vt.on{border-color:var(--gold);background:linear-gradient(180deg,rgba(212,175,55,.28),var(--panel))}.vt.on b{color:var(--gold2)}
+.vp{display:none;flex-direction:column;gap:18px;flex:none}.vp.on{display:flex}
+.clip{position:relative;height:470px;border-radius:26px;border:1px solid var(--line);background:linear-gradient(135deg,#131b30,#0b1020);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.clip::before{content:"";position:absolute;inset:18px;border:2px solid rgba(255,255,255,.1);border-radius:14px}.clip::after{content:"";position:absolute;left:50%;top:18px;bottom:18px;border-left:2px solid rgba(255,255,255,.1)}
+.clip .pl{position:relative;z-index:2;width:120px;height:120px;border-radius:50%;background:rgba(212,175,55,.92);display:flex;align-items:center;justify-content:center}.clip .pl::after{content:"";margin-left:10px;border-left:36px solid #070a12;border-top:22px solid transparent;border-bottom:22px solid transparent}
+.clip .em{position:absolute;left:34px;bottom:30px;z-index:2;font:500 24px 'JetBrains Mono',monospace;letter-spacing:.1em;color:var(--gold2);text-transform:uppercase}.clip video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3}
+.vi{display:flex;align-items:center;gap:22px}.vi b{flex:none;min-width:136px;font:400 108px/.9 'Bebas Neue',sans-serif;color:var(--gold2)}.vi div{font:600 31px/1.25 'Poppins',sans-serif}.vi small{display:block;font:400 25px/1.3 'Poppins',sans-serif;color:var(--grey2);margin-top:4px}
+.th{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.th div{height:122px;border-radius:18px;border:1px solid var(--line);background:var(--panel);padding:12px 16px;display:flex;flex-direction:column;justify-content:center;gap:2px}.th div b{color:#fff;font:600 27px/1.2 'Poppins',sans-serif}.th div span{font:500 22px/1.25 'JetBrains Mono',monospace;color:var(--grey2)}
+
+/* ---------- 11 frente a frente ---------- */
+.fft{flex:none;display:grid;grid-template-columns:262px repeat(4,1fr);align-items:stretch}.fft>div{padding:4px 8px;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line)}
+.fft .hd{align-items:center;justify-content:flex-start;text-align:center;gap:3px;padding:8px 6px 10px}.fft .hd .cr{width:64px;height:64px;padding:8px}.fft .hd b{font:600 26px/1.1 'Poppins',sans-serif;min-height:2.2em;display:flex;align-items:flex-end;justify-content:center}.fft .hd small{font:500 22px 'JetBrains Mono',monospace;color:var(--grey2)}.fft .hd em{font:500 21px/1.25 'Poppins',sans-serif;font-style:normal;color:var(--gold2);min-height:52px}
+.fft .hd.me{background:linear-gradient(180deg,rgba(212,175,55,.26),rgba(212,175,55,.04));border-radius:20px 20px 0 0}
+.fft .lab{font:500 25px/1.2 'Poppins',sans-serif;color:var(--grey);padding-left:0!important}.fft .v{align-items:center;text-align:center;font:700 37px/1 'Poppins',sans-serif}.fft .v small{font:500 23px 'JetBrains Mono',monospace;color:var(--grey2);margin-top:3px}.fft .v.me{background:rgba(212,175,55,.1)}
+
+/* ---------- 12 rankings ---------- */
+.rkb{display:grid;grid-template-columns:62px 46px minmax(0,1fr) 150px 74px;column-gap:14px;row-gap:5px;flex:none}.rkh{grid-column:1/-1;font:700 29px 'Poppins',sans-serif;border-bottom:2px solid rgba(255,255,255,.2);padding-bottom:3px;display:flex;justify-content:space-between;align-items:baseline}.rkh small{font:500 22px 'JetBrains Mono',monospace;color:var(--grey2);letter-spacing:.06em}
+.rr{grid-column:1/-1;display:grid;grid-template-columns:subgrid;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:0 16px;height:48px}
+.rr.eu{background:linear-gradient(90deg,rgba(212,175,55,.26),var(--panel));border-color:var(--gold)}.rn{font:700 27px 'Poppins',sans-serif;color:var(--grey2)}.rr.eu .rn{color:var(--gold2)}
+.rr .cr{width:40px;height:40px;padding:4px}.rt{display:flex;align-items:baseline;gap:12px;min-width:0;overflow:hidden}.rt b{flex:none;font:600 27px/1.25 'Poppins',sans-serif;white-space:nowrap}.rt small{min-width:0;font:400 22px/1.25 'Poppins',sans-serif;color:var(--grey2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rb{height:12px;background:rgba(255,255,255,.11);border-radius:6px;overflow:hidden}.rb i{display:block;height:100%;background:#4b5775;border-radius:6px}.rr.eu .rb i{background:var(--gold)}.rv{font:700 35px 'Poppins',sans-serif;text-align:right}.rr.eu .rv{color:var(--gold2)}
+
+/* ---------- 13 onde cresce ---------- */
+.g3{display:flex;flex-direction:column;gap:20px;flex:none}.gc{background:var(--panel);border:1px solid var(--line);border-left:9px solid var(--amb);border-radius:24px;padding:18px 28px;display:grid;grid-template-columns:250px 1fr;gap:26px;align-items:center;min-height:250px}
+.gn{font:400 150px/.9 'Bebas Neue',sans-serif;color:var(--amb)}.gt{font:700 36px/1.15 'Poppins',sans-serif}.gd{font:400 28px/1.4 'Poppins',sans-serif;color:var(--grey);margin-top:8px}
+
+/* ---------- 14 leitura ---------- */
+.bul{list-style:none;display:flex;flex-direction:column;gap:12px;flex:none}.bul li{display:flex;gap:18px;align-items:flex-start;font:400 28px/1.4 'Poppins',sans-serif;color:var(--grey);background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:20px;padding:14px 20px}.bul li b{color:#fff;font-weight:600}.bul li.neg{border-left-color:var(--amb)}
+
+/* ---------- 15 contato ---------- */
+.g4{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:none}.ct4{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:22px 26px;display:flex;flex-direction:column;gap:4px}
+.ct4 .ck{margin:0}.ct4 .cn{font:700 36px/1.15 'Poppins',sans-serif}.ct4 .cd{font:400 24px/1.3 'Poppins',sans-serif;color:var(--grey);margin-bottom:14px}.ct4 a:first-of-type{margin-top:auto}.ct4 .btn{font:500 22px/1.3 'Poppins',sans-serif}
+
+/* ---------- 16 fontes ---------- */
+.seal{flex:none;display:inline-flex;align-self:flex-start;align-items:center;gap:14px;background:var(--gold);color:#070a12;border-radius:999px;padding:12px 28px;font:600 27px 'Poppins',sans-serif}
+.src{list-style:none;display:flex;flex-direction:column;gap:14px;flex:none}.src li{font:400 27px/1.4 'Poppins',sans-serif;color:var(--grey);padding-left:22px;border-left:5px solid rgba(255,255,255,.2)}html[data-lang="en"] .src li{font-size:26px}.src li b{color:#fff;font-weight:600}
+
+/* ---------- ajustes finais (31/10/2026) ---------- */
+.cover .pic{background-size:auto 116%;background-position:50% 66%}
+.cover h1{font-size:208px}
+.cover .grade{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(212,175,55,.16) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(212,175,55,.16) 1.5px,transparent 1.5px);background-size:72px 72px}
+.strip3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;flex:none}
+.c3{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:14px 20px 16px;display:flex;flex-direction:column;gap:4px}
+.c3 b{font:700 62px/1 'Poppins',sans-serif;color:var(--gold2)}
+.c3 small{font:500 21px/1.25 'JetBrains Mono',monospace;color:var(--grey2);text-transform:uppercase;letter-spacing:.02em}
+.t1{font:400 28px/1.46 'Poppins',sans-serif;color:var(--grey)}.t1 b{color:#fff;font-weight:600}
+.tag{display:inline-block;margin-left:12px;font:600 18px 'JetBrains Mono',monospace;letter-spacing:.1em;padding:3px 12px;border-radius:999px;vertical-align:middle}
+.tag.base{background:rgba(106,168,255,.16);color:#8fbaff;border:1px solid rgba(106,168,255,.45)}
+.tag.prof{background:rgba(212,175,55,.2);color:var(--gold2);border:1px solid var(--gold)}
+.ponte{text-align:center;font:600 24px 'JetBrains Mono',monospace;color:var(--gold2);letter-spacing:.06em}
+.og.sec{grid-column:1/-1;font:600 20px 'JetBrains Mono',monospace;letter-spacing:.14em;padding-top:12px}
+.og.sec.prof{color:var(--gold2)}.og.sec.base{color:#8fbaff}
+.og.sub{font-weight:600;color:var(--grey);border-bottom:2px solid rgba(255,255,255,.25);font-size:24px}
+.fit{font:400 28px/1.46 'Poppins',sans-serif;color:var(--grey);background:linear-gradient(90deg,rgba(212,175,55,.16),var(--panel));border:1px solid rgba(212,175,55,.45);border-radius:22px;padding:18px 24px}.fit b{color:#fff;font-weight:600}
+.bul li i{flex:none;width:44px;height:44px;border-radius:50%;background:rgba(212,175,55,.2);color:var(--gold2);font:700 24px/44px 'Poppins',sans-serif;text-align:center;font-style:normal}
+.bul li.neg i{background:rgba(240,162,75,.22);color:var(--amb)}
+.bul li div{flex:1;min-width:0}
+.fft .v.best{background:rgba(212,175,55,.3);border-radius:12px}.fft .v.best span{color:var(--gold2)}.fft .v.lider small{color:var(--gold2)}
+.btn{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:18px;text-decoration:none;margin-top:10px}
+.btn svg{width:34px;height:34px;flex:none}
+.btn>span{display:flex;flex-direction:column;min-width:0}.btn>span>b{font:700 25px/1.2 'Poppins',sans-serif}.btn small{display:block;font:500 19px/1.2 'Poppins',sans-serif;overflow-wrap:anywhere}
+.ct4 .btn.wa{background:#25d366;color:#052e16}.ct4 .btn.wa small{color:#073b1d}
+.ct4 .btn.em{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);color:#fff}
+.vbox{position:relative;border-radius:22px;overflow:hidden;background:#000;aspect-ratio:16/9;flex:none;cursor:pointer}
+.vbox video{width:100%;height:100%;object-fit:cover;display:block}
+.vplay{position:absolute;left:50%;top:50%;width:132px;height:132px;margin:-66px 0 0 -66px;border-radius:50%;background:rgba(212,175,55,.94)}
+.vplay::after{content:"";position:absolute;left:50px;top:36px;border-left:48px solid #070a12;border-top:30px solid transparent;border-bottom:30px solid transparent}
+.vbox.toca .vplay{opacity:0;pointer-events:none}
+.vbar{position:absolute;left:0;right:0;bottom:0;height:10px;background:rgba(255,255,255,.22)}.vbar i{display:block;height:100%;width:0;background:var(--gold)}
+.vch{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:none}
+.vc{display:flex;gap:14px;align-items:center;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:12px 16px}
+.vc em{font:400 56px/1 'Bebas Neue',sans-serif;font-style:normal;color:var(--gold2);min-width:40px;text-align:center}
+.vc>span{display:flex;flex-direction:column;min-width:0;font:400 21px/1.25 'Poppins',sans-serif;color:var(--grey2)}.vc>span>b{font:600 25px/1.2 'Poppins',sans-serif;color:#fff}
+.vc.on{border-color:var(--gold);background:linear-gradient(90deg,rgba(212,175,55,.24),var(--panel))}
+
+/* ===== versão de 31/10/2026: 16 telas (painéis, mapas, animações, bandeiras) ===== */
+@keyframes fin{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{opacity:0;transform:translateY(-47%) scale(.97)}to{opacity:1;transform:translateY(-50%) scale(1)}}
+@keyframes dotin{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes cellin{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:scale(1)}}
+@keyframes radarin{from{opacity:0;transform:scale(.12)}to{opacity:1;transform:scale(1)}}
+@keyframes zbg{from{background-size:var(--z0)}to{background-size:var(--z1)}}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* ---------- bandeiras e setas ---------- */
+.lang button{display:flex;align-items:center;justify-content:center;padding:5px 7px;opacity:.6}.lang button svg{width:28px;height:28px;border-radius:50%;display:block}.lang button.on{background:var(--gold);opacity:1}
+html.ph .mlang{padding:5px}html.ph .mlang button{padding:8px 11px;opacity:.6}html.ph .mlang button svg{width:42px;height:42px;border-radius:50%;display:block}html.ph .mlang button.on{background:var(--gold);opacity:1}
+.edge{display:none}
+html.ph .edge{display:flex;position:absolute;top:50%;margin-top:-70px;width:34px;height:140px;z-index:45;align-items:center;justify-content:center;color:#fff;opacity:.55;background:none}
+html.ph .edge.p{left:0}html.ph .edge.n{right:0}.edge svg{width:12px;height:44px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.edge:disabled{opacity:0;pointer-events:none}
+html.x .edge{display:none!important}
+
+/* ---------- painel sobre a tela ---------- */
+.xp{display:none}
+.pnl{position:absolute;inset:0;z-index:60;display:none}.pnl.on{display:block}
+.pbk{position:absolute;inset:0;background:rgba(4,6,12,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:fin .2s}
+.pbx{position:absolute;left:40px;right:40px;top:50%;transform:translateY(-50%);max-height:calc(var(--H)*1px - 170px);overflow:auto;background:linear-gradient(160deg,#18213a,#0f1526);border:1.5px solid rgba(212,175,55,.7);border-radius:34px;padding:40px 40px 44px;animation:pop .28s ease-out;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+.px{position:absolute;right:16px;top:14px;width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.14);font-size:46px;line-height:1;display:flex;align-items:center;justify-content:center;z-index:2}
+.ptt{font:700 44px/1.15 'Poppins',sans-serif;margin:0 80px 14px 0}
+.pb{font:400 31px/1.5 'Poppins',sans-serif;color:var(--grey);margin-top:14px}.pb b{color:#fff;font-weight:600}.pb.mini{font-size:25px;color:var(--grey2)}
+.pbx .ck{margin-top:22px}.pbx .ck.prof{color:var(--gold2)}.pbx .ck.base{color:#8fbaff}
+.pbx .ogt{margin-bottom:6px}.pbx .ogt .og{font-size:26px}
+.xw{position:relative;min-width:0}
+.xc{display:block;width:100%;text-align:left;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:14px 20px;transition:border-color .2s,transform .15s}
+.xc:hover{border-color:var(--gold)}.xc:active{transform:scale(.985)}
+.plus{position:absolute;right:14px;top:14px;width:34px;height:34px;border-radius:50%;background:rgba(212,175,55,.22);pointer-events:none}
+.plus::before,.plus::after{content:"";position:absolute;left:9px;right:9px;top:16px;height:2px;background:var(--gold2);border-radius:1px}.plus::after{transform:rotate(90deg)}
+.rkb.rk2{grid-template-columns:78px 50px minmax(0,1fr) 120px 90px;margin-top:10px}.rk2 .rr{height:auto;min-height:56px;padding-top:4px;padding-bottom:4px}.rk2 .rt{flex-direction:column;align-items:flex-start;gap:0;overflow:visible}.rk2 .rt small{white-space:normal;overflow:visible}
+.rkb.r3{grid-template-columns:78px minmax(0,1fr) 130px 120px}
+
+/* ---------- animações de entrada ---------- */
+.zoom{--z0:auto 130%;--z1:auto 100%}
+.fph{flex:none;height:560px;border-radius:30px;background-size:100% auto;background-position:50% 6%;border:1px solid var(--line);animation:zbg 1.5s ease-out both;--z0:135% auto;--z1:100% auto}
+.fph.peq{height:330px;background-position:50% 1%}
+.cover .pic{background-size:auto calc(var(--H)*1px*1.16);background-position:47.4% 63%;animation:zbg 1.8s ease-out both;--z0:auto calc(var(--H)*1px*1.3);--z1:auto calc(var(--H)*1px*1.16)}
+.slide.on .wrap>*{animation:rise .5s ease-out both}.slide.on .wrap>*:nth-child(2){animation-delay:.05s}.slide.on .wrap>*:nth-child(3){animation-delay:.1s}.slide.on .wrap>*:nth-child(4){animation-delay:.15s}.slide.on .wrap>*:nth-child(n+5){animation-delay:.2s}
+.hcl,.dp,.sh{transform-box:fill-box;transform-origin:center}
+html.x *,html.x *::before,html.x *::after{animation:none!important;transition:none!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* ---------- 1 capa ---------- */
+.cover .wrap{justify-content:flex-end;gap:24px;bottom:70px}
+.cover h1{font-size:196px;margin-bottom:-6px}
+.cover .impact{font-size:44px;line-height:1.16}
+.cbx{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;flex:none}
+.cb{background:rgba(7,10,18,.74);border:1px solid var(--line);border-radius:22px;padding:12px 18px 14px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}.cb.c2{grid-column:span 2}.cb.c3{grid-column:span 3}
+.cb small{font:500 19px 'JetBrains Mono',monospace;color:var(--gold);letter-spacing:.14em}
+.cb .cv{font:600 31px/1.2 'Poppins',sans-serif;display:flex;align-items:center;gap:12px;margin-top:6px}.cb .cv img{height:40px;width:auto}.cb .cbc{width:42px;height:42px;padding:5px}
+
+/* ---------- 2 e 3 ---------- */
+.ctx{margin-top:0}
+.fgrid .fc.wide{grid-column:1/-1}
+
+/* ---------- 4 trajetória ---------- */
+.trilha{gap:8px}
+.tnode .xc{display:grid;grid-template-columns:18px 64px minmax(0,1fr);gap:16px;align-items:center;padding:10px 58px 10px 20px}
+.tdot{width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(212,175,55,.25)}
+.tnode.cur .xc{border-color:var(--gold);background:linear-gradient(90deg,rgba(212,175,55,.2),var(--panel))}
+.tnode .tpc{width:62px;height:62px;padding:7px}.tnode .tpn{font:700 30px/1.15 'Poppins',sans-serif}.tnode .tpd{font:400 23px/1.3 'Poppins',sans-serif;color:var(--grey)}
+.tnode .plus{top:50%;margin-top:-17px}
+.tbx{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;flex:none}
+.tbox .xc{padding:12px 14px 12px;height:100%}.tbox .plus{display:none}
+.tbox.prof .xc{border-color:var(--gold);background:linear-gradient(180deg,rgba(212,175,55,.2),var(--panel))}.tbox.base .xc{border-color:rgba(106,168,255,.6)}.tbox.tot .xc{border-color:rgba(255,255,255,.5)}
+.bt{font:600 19px 'JetBrains Mono',monospace;letter-spacing:.1em}.tbox.prof .bt{color:var(--gold2)}.tbox.base .bt{color:#8fbaff}
+.bn{display:grid;grid-template-columns:1fr 1fr;gap:6px 8px;margin-top:8px}.bn>span{display:flex;flex-direction:column}.bn b{font:700 38px/1 'Poppins',sans-serif}.bn small{font:500 17px 'JetBrains Mono',monospace;color:var(--grey2);text-transform:uppercase}
+
+/* ---------- 5 mapas ---------- */
+.mtabs{display:flex;gap:10px;flex:none}
+.mt{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:12px 4px;font:600 28px 'Poppins',sans-serif;color:var(--grey)}.mt.on{border-color:var(--gold);background:linear-gradient(180deg,rgba(212,175,55,.28),var(--panel));color:#fff}
+.mfls{flex:none;min-height:104px}.mfl{display:none;flex-wrap:wrap;gap:8px}.mfl.on{display:flex}
+.mf{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);font:500 24px 'Poppins',sans-serif;color:var(--grey)}.mf em{font:500 19px 'JetBrains Mono',monospace;font-style:normal;color:var(--grey2)}
+.mf.on{background:var(--gold);color:#070a12;border-color:var(--gold)}.mf.on em{color:#3a2f08}
+.mapw{display:grid;grid-template-columns:520px minmax(0,1fr);gap:28px;height:auto;flex:none}
+.pitchw{display:flex;flex-direction:column;gap:10px}
+.heat{width:520px;height:780px;background:#0d1322;border-radius:22px;border:1px solid var(--line)}
+.heat .pl .cl{fill:none;stroke:rgba(255,255,255,.3);stroke-width:1.2}
+.heat .mv{display:none}.heat .mv.on{display:inline}
+.hcl{fill:#d4af37;animation:cellin .55s ease-out both;animation-delay:calc(var(--d)*1ms)}
+.dp{fill:#d4af37;stroke:#fff;stroke-width:.8;animation:dotin .4s ease-out both;animation-delay:calc(var(--d)*1ms)}.dp.no{fill:none;stroke:#f0a24b;stroke-width:1.5}
+.ln{stroke:#d4af37;stroke-width:.9;stroke-opacity:.5;animation:fin .5s both;animation-delay:calc(var(--d)*1ms)}.ln.no{stroke:#f0a24b;stroke-opacity:.7}
+.zn{fill:#d4af37;stroke:rgba(255,255,255,.18);stroke-width:.6;animation:fin .6s both;animation-delay:calc(var(--d)*1ms)}.zt{fill:#fff;font:600 15px 'Poppins',sans-serif}.mk{fill:#fff}.mr{fill:none;stroke:#fff;stroke-width:1.4}
+.sh{animation:dotin .5s ease-out both;animation-delay:calc(var(--d)*1ms)}.sh.gol{fill:#d4af37;stroke:#fff;stroke-width:1.6}.sh.trave{fill:none;stroke:#fff;stroke-width:1.8}.sh.defendida{fill:#6aa8ff;stroke:#fff;stroke-width:.6}.sh.fora{fill:none;stroke:#f0a24b;stroke-width:1.6}
+.lgs{display:none;align-items:center;gap:8px 10px;flex-wrap:wrap;font:500 19px/1.2 'JetBrains Mono',monospace;color:var(--grey2)}.heat[data-v^="f-"]+.lgs{display:flex}
+.lgs i{width:16px;height:16px;border-radius:50%;display:inline-block}.l-gol{background:#d4af37}.l-tr{border:2px solid #fff}.l-df{background:#6aa8ff}.l-fo{border:2px solid #f0a24b}
+.lgi{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-weight:inherit}.l-ok{background:#d4af37}.l-no{border:2px solid #f0a24b}
+.heat[data-v="a-drible"]~.lok,.heat[data-v="a-desarme"]~.lok,.heat[data-v="a-aereo"]~.lok,.heat[data-v="q-todos"]~.lok,.heat[data-v="q-cruz"]~.lok{display:flex}
+.mst{min-height:780px;min-width:0}
+/* vistas dos mapas empilhadas na mesma célula: só a ativa aparece, e a altura é sempre a da maior (trocar de aba não mexe na tela) */
+.mst{display:grid;align-content:start}.mst>.ms{grid-area:1/1;display:flex;visibility:hidden}.mst>.ms.on{visibility:visible}
+.mfls{display:grid;align-content:start}.mfls>.mfl{grid-area:1/1;display:flex;visibility:hidden}.mfls>.mfl.on{visibility:visible}
+.pitchw{display:grid;align-content:start;row-gap:10px}.pitchw>.heat{grid-area:1/1}.pitchw>.lgs{grid-area:2/1;display:flex;visibility:hidden}
+.heat[data-v^="f-"]+.lgs,.heat[data-v="a-drible"]~.lok,.heat[data-v="a-desarme"]~.lok,.heat[data-v="a-aereo"]~.lok,.heat[data-v="q-todos"]~.lok,.heat[data-v="q-cruz"]~.lok{visibility:visible}
+.ms{display:none;flex-direction:column;gap:10px}.ms.on{display:flex}
+.mn{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:14px 22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:0 14px;min-width:0}.mn b{font:700 68px/1 'Poppins',sans-serif;color:var(--gold2)}.mn>span{font:500 26px/1.2 'Poppins',sans-serif;color:var(--grey)}
+.mh{font:400 27px/1.42 'Poppins',sans-serif;color:var(--grey);background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:16px 22px}
+.zk{font:500 19px 'JetBrains Mono',monospace;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+.zr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.zb{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:10px 6px;text-align:center}.zb b{display:block;font:700 38px/1 'Poppins',sans-serif}.zb small{font:500 18px/1.2 'JetBrains Mono',monospace;color:var(--grey2)}
+
+/* ---------- 6 arquétipo ---------- */
+.arqs{display:flex;flex-direction:column;gap:12px;flex:none}
+.arq .xc{padding:14px 64px 14px 24px}.arq .plus{top:16px}
+.ah{display:flex;justify-content:space-between;align-items:baseline;gap:12px}.an{font:700 33px/1.15 'Poppins',sans-serif}.ap{font:700 44px/1 'Poppins',sans-serif;color:var(--gold2)}
+.ab{height:14px;background:rgba(255,255,255,.12);border-radius:7px;margin:8px 0;overflow:hidden}.ab i{display:block;height:100%;background:#4b5775;border-radius:7px;transform-origin:left;animation:grow 1s ease-out both}.arq.me .ab i{background:var(--gold)}
+.ad{font:400 24px/1.35 'Poppins',sans-serif;color:var(--grey)}.as{font:600 20px 'JetBrains Mono',monospace;letter-spacing:.05em;margin-top:6px;color:var(--grey2)}.arq.me .as{color:var(--gold2)}
+.arq.me .xc{border-color:var(--gold);background:linear-gradient(90deg,rgba(212,175,55,.2),var(--panel))}
+.cdl{display:flex;flex-direction:column;gap:8px;margin-top:18px}.cd2{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;background:rgba(255,255,255,.05);border-radius:14px;padding:10px 16px;font:500 28px 'Poppins',sans-serif}
+.cd2 .ck2{font-weight:700}.cd2.ok .ck2{color:var(--green)}.cd2.no .ck2{color:var(--amb)}.cv2{font:500 24px 'JetBrains Mono',monospace;color:var(--grey2)}
+
+/* ---------- 7 momento ---------- */
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;flex:none}
+.lcard .xc{padding:14px 14px 12px;height:100%}.lcard .plus{width:28px;height:28px;right:10px;top:10px}.lcard .plus::before,.lcard .plus::after{top:13px;left:7px;right:7px}
+.lv b{display:block;font:700 54px/1 'Poppins',sans-serif;color:var(--gold2)}.lv>span{display:block;font:500 22px/1.25 'Poppins',sans-serif;color:var(--grey);margin-top:2px}
+.lr{display:flex;gap:6px 14px;margin-top:8px;font:500 19px 'JetBrains Mono',monospace;color:var(--grey2);flex-wrap:wrap}.lr>span b{color:#fff;font-weight:700}
+.mg2{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;flex:none}
+.gm2 .xc{padding:8px 4px 10px;display:flex;flex-direction:column;align-items:center;gap:4px;border-radius:16px}.gm2 .plus{display:none}
+.gr{font:500 17px 'JetBrains Mono',monospace;color:var(--grey2)}.gm2 .cr{width:46px;height:46px;padding:5px}.gres{font:700 26px/1 'Poppins',sans-serif}
+.gm2.V .gres{color:var(--green)}.gm2.D .gres{color:var(--amb)}.gm2.E .gres{color:var(--grey)}
+.gbar{width:86%;height:8px;background:rgba(255,255,255,.13);border-radius:4px;overflow:hidden}.gbar i{display:block;height:100%;background:var(--gold)}.gm2.sub .gbar i{background:#7b86a1}
+.gl{position:absolute;right:6px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+
+/* ---------- 8 dispersão ---------- */
+.dt{position:absolute;width:16px;height:16px;margin:0 0 -8px -8px;padding:0;border-radius:50%;background:#56627f;opacity:.92;animation:dotin .4s ease-out both;animation-delay:calc(var(--d)*1ms)}
+.dt::after{content:"";position:absolute;inset:-14px}
+.dt.on{background:#fff;z-index:6;box-shadow:0 0 0 7px rgba(255,255,255,.4)}
+.tip{display:none;position:absolute;z-index:7;bottom:24px;width:max-content;max-width:480px;gap:12px;align-items:center;background:rgba(7,10,18,.97);border:1px solid var(--gold);border-radius:16px;padding:10px 14px;text-align:left;font:500 23px/1.3 'Poppins',sans-serif;color:#fff;pointer-events:none}
+.dt.on .tip{display:flex}.tip.tpl{right:-8px}.tip.tpr{left:-8px}.tip .cr{width:48px;height:48px;padding:5px}.tip b{font-weight:600}
+.qt{position:absolute;right:12px;top:8px;font:500 20px 'JetBrains Mono',monospace;color:var(--green);letter-spacing:.04em}
+.ponto.eu .rosto{position:absolute;left:-46px;top:-46px;width:92px;height:92px;border-radius:50%;border:5px solid var(--gold);background:#fff;z-index:3;object-fit:cover;box-shadow:0 4px 16px rgba(0,0,0,.6);animation:dotin .6s .6s ease-out both}
+.ponto.eu .cr.mini{left:14px;top:14px;width:38px;height:38px;padding:4px;border:3px solid var(--gold);z-index:4}
+.ponto.eu.l .lb{right:58px}
+.sd{animation:dotin .4s ease-out both;animation-delay:calc(var(--d)*1ms)}.sd.me{animation:none}
+
+/* ---------- 9 lideranças ---------- */
+.tlx .xc{padding:0;border:0;background:transparent;border-radius:22px;height:100%}.tlx .plus{top:auto;bottom:12px;right:14px}
+.tlx .tl{height:100%}
+
+/* ---------- 10 radar ---------- */
+.radar{flex:none;width:100%;height:auto;margin:-6px 0 0}.radar .sec{fill-opacity:.11}
+.radar .poly{transform-box:view-box;transform-origin:50% 50%;animation:radarin 1.1s ease-out both}.radar .vx{animation:fin .3s .9s both}.radar .vx.fr{fill:var(--amb)}
+.radar .a1{font-size:33px}.radar .a2{font-size:30px}
+.legf{display:flex;gap:6px 20px;justify-content:center;flex-wrap:wrap;font:500 21px 'JetBrains Mono',monospace;color:var(--grey);flex:none}
+.legf>span::before{content:"";display:inline-block;width:16px;height:16px;border-radius:50%;background:var(--c);margin-right:8px;vertical-align:-2px}.legf .fr::before{background:var(--amb)}
+.fcs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;flex:none}.famc .xc{padding:12px 14px;height:100%}.famc .plus{width:28px;height:28px;right:10px;top:10px}.famc .plus::before,.famc .plus::after{top:13px;left:7px;right:7px}
+.fh b{display:block;font:700 28px/1.15 'Poppins',sans-serif;color:var(--c)}.fh>span{font:500 17px 'JetBrains Mono',monospace;color:var(--grey2)}.fm b{font:700 52px/1 'Poppins',sans-serif;margin-top:4px;display:block}
+
+/* ---------- 11 vídeos ---------- */
+.vfs{position:absolute;right:14px;top:14px;width:62px;height:62px;border-radius:14px;background:rgba(7,10,18,.72);color:#fff;z-index:4;display:flex;align-items:center;justify-content:center}.vfs svg{width:34px;height:34px}
+.vbox:fullscreen,.vbox:-webkit-full-screen{border-radius:0;aspect-ratio:auto;width:100%;height:100%}.vbox:fullscreen video{object-fit:contain}.vbox:-webkit-full-screen video{object-fit:contain}
+
+/* ---------- 12 semelhantes ---------- */
+.scs{display:flex;flex-direction:column;gap:12px;flex:none}
+.scard .xc{display:grid;grid-template-columns:96px minmax(0,1fr);grid-template-rows:auto auto;column-gap:20px;row-gap:2px;padding:16px 62px 16px 18px;align-items:center}
+.av{grid-row:span 2;width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#2a3558,#161d31);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font:700 34px 'Poppins',sans-serif;color:var(--gold2)}
+.sn b{display:block;font:700 36px/1.15 'Poppins',sans-serif}.sn small{font:500 21px 'JetBrains Mono',monospace;color:var(--grey2)}.sq{font:400 25px/1.35 'Poppins',sans-serif;color:var(--grey)}
+.scard .plus{top:50%;margin-top:-17px}
+
+/* ---------- 13 e 14 ---------- */
+.gcard .xc{display:grid;grid-template-columns:84px minmax(0,1fr) auto;gap:22px;align-items:center;padding:16px 64px 16px 22px;border-left:9px solid var(--amb);min-height:150px}
+.gcard .plus{top:50%;margin-top:-17px}
+.ig{width:84px;height:84px;border-radius:24px;background:rgba(240,162,75,.16);color:var(--amb);display:flex;align-items:center;justify-content:center}.ico{width:54px;height:54px}
+.gcard .gt{font:700 35px/1.15 'Poppins',sans-serif}.gcard .gs{font:500 22px/1.3 'JetBrains Mono',monospace;color:var(--grey2);margin-top:4px}
+.gnum{text-align:right}.gnum b{display:block;font:400 100px/.9 'Bebas Neue',sans-serif;color:var(--amb)}.gnum small{display:block;font:500 19px/1.2 'JetBrains Mono',monospace;color:var(--grey2)}
+.gcard.lc .xc{grid-template-columns:84px minmax(0,1fr);border-left-color:var(--gold);min-height:120px}.gcard.lc .ig{background:rgba(212,175,55,.16);color:var(--gold2)}
+.gcard.lc.neg .xc{border-left-color:var(--amb)}.gcard.lc.neg .ig{background:rgba(240,162,75,.16);color:var(--amb)}
+.g3.lcs{gap:12px}
+
+/* ---------- 15 contato ---------- */
+.ctw .clogo{height:96px;width:auto;align-self:flex-start;flex:none}
+
+.slide.meas .wrap>*{animation:none!important}
+
+/* os idiomas ficam escondidos mesmo quando uma regra de bloco muda o display do span */
+.i{display:none!important}html[data-lang="br"] .i.br,html[data-lang="pt"] .i.pt,html[data-lang="en"] .i.en,html[data-lang="es"] .i.es{display:inline!important}
+/* Ícaro: tabelas das telas 6, 7 e 9 */
+html:root .ogt.gols19{grid-template-columns:130px minmax(0,1fr) 250px}html:root .ogt.ult10{grid-template-columns:130px minmax(0,1fr) 110px 90px}html:root .ogt.uni4{grid-template-columns:minmax(0,1fr) 130px 190px 170px}
+.gsm{display:inline;margin-left:12px;font:500 17px/1.2 'JetBrains Mono',monospace;color:var(--grey2);letter-spacing:.06em;text-transform:uppercase}
+/* Ícaro, versão de 02/11 (tarde): ficha menor e tabela das competições de federação */
+.slide.fs .fv{font:600 27px/1.25 'Poppins',sans-serif}.slide.fs .fk{font-size:19px}.slide.fs .fc{padding:8px 20px}.slide.fs .c3 b{font-size:50px}.slide.fs .c3 small{font-size:20px}.slide.fs .fph.peq{height:600px;background-position:50% 8%}
+html:root .ogt.fed4{grid-template-columns:minmax(0,1fr) 90px 140px 90px}
+
+/* Layout adaptativo (html.m, todos os aparelhos) e tela cheia do celular (html.ph, largura <= 760 px). A parte automática (medidas verticais x --k) vem de gera_mobile_css.py. */
+.mlang{display:none}
+html.ph,html.ph body{height:100%}
+html.ph .bgblur,html.ph .chrome,html.ph .cap,html.ph .nav{display:none}
+html.ph .app{position:fixed;inset:0;display:block}
+html.ph .view{display:block;height:var(--vh);padding:0}
+html.ph .frame{position:absolute;left:0;top:0;width:100vw;height:var(--vh);border-radius:0;box-shadow:none}
+html.m .bars{top:26px;left:48px;right:48px}
+html.m .brand{top:48px;left:48px;right:48px;gap:14px}
+html.m .brand img{height:30px}
+html.m .brand .nm{font-size:20px;letter-spacing:.14em}
+html.m .brand .cnt{font-size:20px;margin-left:auto}
+html.ph .mlang{display:flex;gap:4px;background:rgba(255,255,255,.12);border-radius:999px;padding:4px;margin-left:10px}
+html.ph .mlang button{position:relative;font:600 28px 'JetBrains Mono',monospace;letter-spacing:.08em;padding:10px 24px;border-radius:999px;opacity:.8}
+html.ph .mlang button::after{content:"";position:absolute;inset:-44px -22px -44px -22px}
+html.ph .mlang button.on{background:#fff;color:#070a12;opacity:1}
+html.m .wrap{top:118px;bottom:56px;row-gap:calc(24px*var(--k,1) + var(--gx,0px))}
+html.m .cover .wrap{top:118px;bottom:90px}
+/* ajustes por tela no celular */
+html.m .mg{grid-template-columns:repeat(3,1fr)}
+html.m .fft{grid-template-columns:300px repeat(4,1fr)}
+html.m .g4{grid-template-columns:1fr}
+html.m .ct4 a{word-break:normal;overflow-wrap:normal}
+html.m .ct4 .cd{min-height:0}
+
+/* modo celular, gerado */
+html.m .kick{font:500 max(var(--fmin,0px),calc(26px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m h2{font:700 max(var(--fmin,0px),calc(56px*var(--k,1)))/1.08 'Poppins',sans-serif}
+html.m .lead{font:400 max(var(--fmin,0px),calc(33px*var(--k,1)))/1.45 'Poppins',sans-serif}
+html.m .t{font:400 max(var(--fmin,0px),calc(31px*var(--k,1)))/1.5 'Poppins',sans-serif}
+html.m .nota{font:400 max(var(--fmin,0px),calc(23px*var(--k,1)))/1.4 'Poppins',sans-serif}
+html.m .card{padding:calc(24px*var(--k,1)) 26px calc(24px*var(--k,1)) 26px}
+html.m .cr{padding:calc(6px*var(--k,1)) 6px calc(6px*var(--k,1)) 6px}
+html.m .band{height:calc(250px*var(--k,1))}
+html.m .impact{font:700 max(var(--fmin,0px),calc(56px*var(--k,1)))/1.13 'Poppins',sans-serif}
+html.m .chips{row-gap:calc(14px*var(--k,1));column-gap:14px}
+html.m .chip{row-gap:calc(14px*var(--k,1));column-gap:14px;font:600 max(var(--fmin,0px),calc(28px*var(--k,1))) 'Poppins',sans-serif;padding:calc(12px*var(--k,1)) 26px calc(12px*var(--k,1)) 26px}
+html.m .chip img{height:calc(36px*var(--k,1))}
+html.m .ctx{font:500 max(var(--fmin,0px),calc(22px*var(--k,1))) 'JetBrains Mono',monospace;margin-top:calc(-8px*var(--k,1))}
+html.m .strip6{row-gap:calc(14px*var(--k,1));column-gap:14px}
+html.m .strip6 .c{padding:calc(10px*var(--k,1)) 22px calc(10px*var(--k,1)) 22px}
+html.m .strip6 b{font:700 max(var(--fmin,0px),calc(50px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .strip6 small{font:500 max(var(--fmin,0px),calc(22px*var(--k,1)))/1.2 'JetBrains Mono',monospace;margin-top:calc(4px*var(--k,1))}
+html.m .hl{row-gap:calc(14px*var(--k,1));column-gap:14px}
+html.m .hc{padding:calc(12px*var(--k,1)) 18px calc(12px*var(--k,1)) 18px;row-gap:calc(14px*var(--k,1));column-gap:14px}
+html.m .hc b{font:400 max(var(--fmin,0px),calc(64px*var(--k,1)))/1 'Bebas Neue',sans-serif}
+html.m .hc i{font:600 max(var(--fmin,0px),calc(24px*var(--k,1)))/1.2 'Poppins',sans-serif}
+html.m .hc u{font:600 max(var(--fmin,0px),calc(28px*var(--k,1)))/1.15 'Poppins',sans-serif}
+html.m .fcard{height:calc(440px*var(--k,1))}
+html.m .fgrid{row-gap:calc(14px*var(--k,1));column-gap:14px}
+html.m .fc{padding:calc(12px*var(--k,1)) 22px calc(12px*var(--k,1)) 22px}
+html.m .fk{font:500 max(var(--fmin,0px),calc(22px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .fv{font:600 max(var(--fmin,0px),calc(30px*var(--k,1)))/1.25 'Poppins',sans-serif;margin-top:calc(4px*var(--k,1))}
+html.m .trilha{row-gap:calc(10px*var(--k,1));column-gap:10px}
+html.m .tp{row-gap:calc(20px*var(--k,1));column-gap:20px;padding:calc(8px*var(--k,1)) 22px calc(8px*var(--k,1)) 22px}
+html.m .tpn{font:700 max(var(--fmin,0px),calc(32px*var(--k,1)))/1.1 'Poppins',sans-serif}
+html.m .tpy{font:500 max(var(--fmin,0px),calc(24px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .tpd{font:400 max(var(--fmin,0px),calc(25px*var(--k,1)))/1.3 'Poppins',sans-serif}
+html.m .og{padding:calc(6px*var(--k,1)) 10px calc(6px*var(--k,1)) 10px;font:500 max(var(--fmin,0px),calc(26px*var(--k,1)))/1.35 'Poppins',sans-serif}
+html.m .og.h{font:500 max(var(--fmin,0px),calc(22px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .ck{font:500 max(var(--fmin,0px),calc(22px*var(--k,1))) 'JetBrains Mono',monospace;margin-bottom:calc(8px*var(--k,1))}
+html.m .mg{row-gap:calc(16px*var(--k,1));column-gap:16px}
+html.m .gm{padding:calc(10px*var(--k,1)) 14px calc(12px*var(--k,1)) 14px;row-gap:calc(6px*var(--k,1));column-gap:6px}
+html.m .gm .gh{row-gap:calc(6px*var(--k,1));column-gap:6px;font:500 max(var(--fmin,0px),calc(22px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .gm .res{font:700 max(var(--fmin,0px),calc(40px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .gm .gb{height:calc(10px*var(--k,1))}
+html.m .gm .gs{row-gap:0;column-gap:0;font:400 max(var(--fmin,0px),calc(22px*var(--k,1)))/1.3 'Poppins',sans-serif}
+html.m .gm .gs b{font-size:max(var(--fmin,0px),calc(28px*var(--k,1)))}
+html.m .gm .gh .gol{padding:0 7px 0 7px}
+html.m .sc{height:calc(600px*var(--k,1));margin:calc(20px*var(--k,1)) 26px calc(56px*var(--k,1)) 70px}
+html.m .ax{font:500 max(var(--fmin,0px),calc(23px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .tk{font:500 max(var(--fmin,0px),calc(22px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .tg2{row-gap:calc(22px*var(--k,1));column-gap:22px}
+html.m .tl{padding:calc(14px*var(--k,1)) 24px calc(16px*var(--k,1)) 24px;row-gap:calc(6px*var(--k,1));column-gap:6px;min-height:calc(246px*var(--k,1))}
+html.m .tl .r1{row-gap:calc(10px*var(--k,1));column-gap:10px;min-height:calc(72px*var(--k,1))}
+html.m .tl .tn{font:500 max(var(--fmin,0px),calc(27px*var(--k,1)))/1.2 'Poppins',sans-serif}
+html.m .tl .tp2{font:700 max(var(--fmin,0px),calc(42px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .tl .tp2 small{font:500 max(var(--fmin,0px),calc(22px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .tl .md{font:500 max(var(--fmin,0px),calc(22px*var(--k,1)))/1.2 'JetBrains Mono',monospace;margin-top:calc(5px*var(--k,1))}
+html.m .tl .tv{font:700 max(var(--fmin,0px),calc(88px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .strip{height:calc(34px*var(--k,1))}
+html.m .strip .base{height:calc(2px*var(--k,1))}
+html.m .st4{row-gap:calc(16px*var(--k,1));column-gap:16px}
+html.m .st{padding:calc(24px*var(--k,1)) 24px calc(14px*var(--k,1)) 24px}
+html.m .stv{font:700 max(var(--fmin,0px),calc(74px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .stl{font:400 max(var(--fmin,0px),calc(25px*var(--k,1)))/1.3 'Poppins',sans-serif}
+html.m .lgd{row-gap:calc(12px*var(--k,1));column-gap:12px;font:500 max(var(--fmin,0px),calc(21px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .lgd i{height:calc(14px*var(--k,1))}
+html.m .vts{row-gap:calc(10px*var(--k,1));column-gap:10px}
+html.m .vt{padding:calc(10px*var(--k,1)) 6px calc(10px*var(--k,1)) 6px;row-gap:calc(2px*var(--k,1));column-gap:2px}
+html.m .vt i{font:600 max(var(--fmin,0px),calc(22px*var(--k,1)))/1.15 'Poppins',sans-serif;min-height:calc(52px*var(--k,1))}
+html.m .vt b{font:700 max(var(--fmin,0px),calc(40px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .vp{row-gap:calc(18px*var(--k,1));column-gap:18px}
+html.m .clip{height:calc(470px*var(--k,1))}
+html.m .clip .em{font:500 max(var(--fmin,0px),calc(24px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .vi{row-gap:calc(22px*var(--k,1));column-gap:22px}
+html.m .vi b{font:400 max(var(--fmin,0px),calc(108px*var(--k,1)))/.9 'Bebas Neue',sans-serif}
+html.m .vi div{font:600 max(var(--fmin,0px),calc(31px*var(--k,1)))/1.25 'Poppins',sans-serif}
+html.m .vi small{font:400 max(var(--fmin,0px),calc(25px*var(--k,1)))/1.3 'Poppins',sans-serif;margin-top:calc(4px*var(--k,1))}
+html.m .th{row-gap:calc(14px*var(--k,1));column-gap:14px}
+html.m .th div{height:calc(122px*var(--k,1));padding:calc(12px*var(--k,1)) 16px calc(12px*var(--k,1)) 16px;row-gap:calc(2px*var(--k,1));column-gap:2px}
+html.m .th div b{font:600 max(var(--fmin,0px),calc(27px*var(--k,1)))/1.2 'Poppins',sans-serif}
+html.m .th div span{font:500 max(var(--fmin,0px),calc(22px*var(--k,1)))/1.25 'JetBrains Mono',monospace}
+html.m .fft>div{padding:calc(4px*var(--k,1)) 8px calc(4px*var(--k,1)) 8px}
+html.m .fft .hd{row-gap:calc(3px*var(--k,1));column-gap:3px;padding:calc(8px*var(--k,1)) 6px calc(10px*var(--k,1)) 6px}
+html.m .fft .hd b{font:600 max(var(--fmin,0px),calc(26px*var(--k,1)))/1.1 'Poppins',sans-serif}
+html.m .fft .hd small{font:500 max(var(--fmin,0px),calc(22px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .fft .hd em{font:500 max(var(--fmin,0px),calc(21px*var(--k,1)))/1.25 'Poppins',sans-serif;min-height:calc(52px*var(--k,1))}
+html.m .fft .lab{font:500 max(var(--fmin,0px),calc(25px*var(--k,1)))/1.2 'Poppins',sans-serif}
+html.m .fft .v{font:700 max(var(--fmin,0px),calc(37px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .fft .v small{font:500 max(var(--fmin,0px),calc(23px*var(--k,1))) 'JetBrains Mono',monospace;margin-top:calc(3px*var(--k,1))}
+html.m .rkb{row-gap:calc(5px*var(--k,1))}
+html.m .rkh{font:700 max(var(--fmin,0px),calc(29px*var(--k,1))) 'Poppins',sans-serif;padding-bottom:calc(3px*var(--k,1))}
+html.m .rkh small{font:500 max(var(--fmin,0px),calc(22px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .rr{padding:0 16px 0 16px;height:calc(48px*var(--k,1))}
+html.m .rn{font:700 max(var(--fmin,0px),calc(27px*var(--k,1))) 'Poppins',sans-serif}
+html.m .rt{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .rt b{font:600 max(var(--fmin,0px),calc(27px*var(--k,1)))/1.25 'Poppins',sans-serif}
+html.m .rt small{font:400 max(var(--fmin,0px),calc(22px*var(--k,1)))/1.25 'Poppins',sans-serif}
+html.m .rb{height:calc(12px*var(--k,1))}
+html.m .rv{font:700 max(var(--fmin,0px),calc(35px*var(--k,1))) 'Poppins',sans-serif}
+html.m .g3{row-gap:calc(20px*var(--k,1));column-gap:20px}
+html.m .gc{padding:calc(18px*var(--k,1)) 28px calc(18px*var(--k,1)) 28px;row-gap:calc(26px*var(--k,1));column-gap:26px;min-height:calc(250px*var(--k,1))}
+html.m .gn{font:400 max(var(--fmin,0px),calc(150px*var(--k,1)))/.9 'Bebas Neue',sans-serif}
+html.m .gt{font:700 max(var(--fmin,0px),calc(36px*var(--k,1)))/1.15 'Poppins',sans-serif}
+html.m .gd{font:400 max(var(--fmin,0px),calc(28px*var(--k,1)))/1.4 'Poppins',sans-serif;margin-top:calc(8px*var(--k,1))}
+html.m .bul{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .bul li{row-gap:calc(18px*var(--k,1));column-gap:18px;font:400 max(var(--fmin,0px),calc(28px*var(--k,1)))/1.4 'Poppins',sans-serif;padding:calc(14px*var(--k,1)) 20px calc(14px*var(--k,1)) 20px}
+html.m .g4{row-gap:calc(20px*var(--k,1));column-gap:20px}
+html.m .ct4{padding:calc(22px*var(--k,1)) 26px calc(22px*var(--k,1)) 26px;row-gap:calc(4px*var(--k,1));column-gap:4px}
+html.m .ct4 .cn{font:700 max(var(--fmin,0px),calc(36px*var(--k,1)))/1.15 'Poppins',sans-serif}
+html.m .ct4 .cd{font:400 max(var(--fmin,0px),calc(24px*var(--k,1)))/1.3 'Poppins',sans-serif;margin-bottom:calc(14px*var(--k,1))}
+html.m .ct4 .btn{font:500 max(var(--fmin,0px),calc(22px*var(--k,1)))/1.3 'Poppins',sans-serif}
+html.m .seal{row-gap:calc(14px*var(--k,1));column-gap:14px;padding:calc(12px*var(--k,1)) 28px calc(12px*var(--k,1)) 28px;font:600 max(var(--fmin,0px),calc(27px*var(--k,1))) 'Poppins',sans-serif}
+html.m .src{row-gap:calc(14px*var(--k,1));column-gap:14px}
+html.m .src li{font:400 max(var(--fmin,0px),calc(27px*var(--k,1)))/1.4 'Poppins',sans-serif}
+html.m html[data-lang="en"] .src li{font-size:max(var(--fmin,0px),calc(26px*var(--k,1)))}
+html.m .strip3{row-gap:calc(14px*var(--k,1));column-gap:14px}
+html.m .c3{padding:calc(14px*var(--k,1)) 20px calc(16px*var(--k,1)) 20px;row-gap:calc(4px*var(--k,1));column-gap:4px}
+html.m .c3 b{font:700 max(var(--fmin,0px),calc(62px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .c3 small{font:500 max(var(--fmin,0px),calc(21px*var(--k,1)))/1.25 'JetBrains Mono',monospace}
+html.m .t1{font:400 max(var(--fmin,0px),calc(28px*var(--k,1)))/1.46 'Poppins',sans-serif}
+html.m .tag{font:600 max(var(--fmin,0px),calc(18px*var(--k,1))) 'JetBrains Mono',monospace;padding:calc(3px*var(--k,1)) 12px calc(3px*var(--k,1)) 12px}
+html.m .ponte{font:600 max(var(--fmin,0px),calc(24px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .og.sec{font:600 max(var(--fmin,0px),calc(20px*var(--k,1))) 'JetBrains Mono',monospace;padding-top:calc(12px*var(--k,1))}
+html.m .og.sub{font-size:max(var(--fmin,0px),calc(24px*var(--k,1)))}
+html.m .fit{font:400 max(var(--fmin,0px),calc(28px*var(--k,1)))/1.46 'Poppins',sans-serif;padding:calc(18px*var(--k,1)) 24px calc(18px*var(--k,1)) 24px}
+html.m .btn{row-gap:calc(14px*var(--k,1));column-gap:14px;padding:calc(14px*var(--k,1)) 18px calc(14px*var(--k,1)) 18px;margin-top:calc(10px*var(--k,1))}
+html.m .btn>span>b{font:700 max(var(--fmin,0px),calc(25px*var(--k,1)))/1.2 'Poppins',sans-serif}
+html.m .btn small{font:500 max(var(--fmin,0px),calc(19px*var(--k,1)))/1.2 'Poppins',sans-serif}
+html.m .vbar{height:calc(10px*var(--k,1))}
+html.m .vch{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .vc{row-gap:calc(14px*var(--k,1));column-gap:14px;padding:calc(12px*var(--k,1)) 16px calc(12px*var(--k,1)) 16px}
+html.m .vc em{font:400 max(var(--fmin,0px),calc(56px*var(--k,1)))/1 'Bebas Neue',sans-serif}
+html.m .vc>span{font:400 max(var(--fmin,0px),calc(21px*var(--k,1)))/1.25 'Poppins',sans-serif}
+html.m .vc>span>b{font:600 max(var(--fmin,0px),calc(25px*var(--k,1)))/1.2 'Poppins',sans-serif}
+html.m html.ph .mlang{padding:calc(5px*var(--k,1)) 5px calc(5px*var(--k,1)) 5px}
+html.m html.ph .mlang button{padding:calc(8px*var(--k,1)) 11px calc(8px*var(--k,1)) 11px}
+html.m .xc{padding:calc(14px*var(--k,1)) 20px calc(14px*var(--k,1)) 20px}
+html.m .rkb.rk2{margin-top:calc(10px*var(--k,1))}
+html.m .rk2 .rr{min-height:calc(56px*var(--k,1));padding-top:calc(4px*var(--k,1));padding-bottom:calc(4px*var(--k,1))}
+html.m .rk2 .rt{row-gap:0;column-gap:0}
+html.m .cbx{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .cb{padding:calc(12px*var(--k,1)) 18px calc(14px*var(--k,1)) 18px}
+html.m .cb small{font:500 max(var(--fmin,0px),calc(19px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .cb .cv{font:600 max(var(--fmin,0px),calc(31px*var(--k,1)))/1.2 'Poppins',sans-serif;row-gap:calc(12px*var(--k,1));column-gap:12px;margin-top:calc(6px*var(--k,1))}
+html.m .cb .cv img{height:calc(40px*var(--k,1))}
+html.m .trilha{row-gap:calc(8px*var(--k,1));column-gap:8px}
+html.m .tnode .xc{row-gap:calc(16px*var(--k,1));column-gap:16px;padding:calc(10px*var(--k,1)) 58px calc(10px*var(--k,1)) 20px}
+html.m .tnode .tpn{font:700 max(var(--fmin,0px),calc(30px*var(--k,1)))/1.15 'Poppins',sans-serif}
+html.m .tnode .tpd{font:400 max(var(--fmin,0px),calc(23px*var(--k,1)))/1.3 'Poppins',sans-serif}
+html.m .tnode .plus{margin-top:calc(-17px*var(--k,1))}
+html.m .tbx{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .tbox .xc{padding:calc(12px*var(--k,1)) 14px calc(12px*var(--k,1)) 14px}
+html.m .bt{font:600 max(var(--fmin,0px),calc(19px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .bn{gap:calc(6px*var(--k,1)) 8px;margin-top:calc(8px*var(--k,1))}
+html.m .bn b{font:700 max(var(--fmin,0px),calc(38px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .bn small{font:500 max(var(--fmin,0px),calc(17px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .mtabs{row-gap:calc(10px*var(--k,1));column-gap:10px}
+html.m .mt{padding:calc(12px*var(--k,1)) 4px calc(12px*var(--k,1)) 4px;font:600 max(var(--fmin,0px),calc(28px*var(--k,1))) 'Poppins',sans-serif}
+html.m .mf{row-gap:calc(8px*var(--k,1));column-gap:8px;padding:calc(8px*var(--k,1)) 16px calc(8px*var(--k,1)) 16px;font:500 max(var(--fmin,0px),calc(24px*var(--k,1))) 'Poppins',sans-serif}
+html.m .mf em{font:500 max(var(--fmin,0px),calc(19px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .lgs{gap:calc(8px*var(--k,1)) 10px;font:500 max(var(--fmin,0px),calc(19px*var(--k,1)))/1.2 'JetBrains Mono',monospace}
+html.m .lgi{row-gap:calc(8px*var(--k,1));column-gap:8px}
+html.m .ms{row-gap:calc(10px*var(--k,1));column-gap:10px}
+html.m .mn{padding:calc(14px*var(--k,1)) 22px calc(14px*var(--k,1)) 22px;gap:0 14px}
+html.m .mn b{font:700 max(var(--fmin,0px),calc(68px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .mn>span{font:500 max(var(--fmin,0px),calc(26px*var(--k,1)))/1.2 'Poppins',sans-serif}
+html.m .mh{font:400 max(var(--fmin,0px),calc(27px*var(--k,1)))/1.42 'Poppins',sans-serif;padding:calc(16px*var(--k,1)) 22px calc(16px*var(--k,1)) 22px}
+html.m .zk{font:500 max(var(--fmin,0px),calc(19px*var(--k,1))) 'JetBrains Mono',monospace;margin-top:calc(4px*var(--k,1))}
+html.m .zr{row-gap:calc(8px*var(--k,1));column-gap:8px}
+html.m .zb{padding:calc(10px*var(--k,1)) 6px calc(10px*var(--k,1)) 6px}
+html.m .zb b{font:700 max(var(--fmin,0px),calc(38px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .zb small{font:500 max(var(--fmin,0px),calc(18px*var(--k,1)))/1.2 'JetBrains Mono',monospace}
+html.m .arqs{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .arq .xc{padding:calc(14px*var(--k,1)) 64px calc(14px*var(--k,1)) 24px}
+html.m .ah{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .an{font:700 max(var(--fmin,0px),calc(33px*var(--k,1)))/1.15 'Poppins',sans-serif}
+html.m .ap{font:700 max(var(--fmin,0px),calc(44px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .ab{height:calc(14px*var(--k,1));margin:calc(8px*var(--k,1)) 0 calc(8px*var(--k,1)) 0}
+html.m .ad{font:400 max(var(--fmin,0px),calc(24px*var(--k,1)))/1.35 'Poppins',sans-serif}
+html.m .as{font:600 max(var(--fmin,0px),calc(20px*var(--k,1))) 'JetBrains Mono',monospace;margin-top:calc(6px*var(--k,1))}
+html.m .cdl{row-gap:calc(8px*var(--k,1));column-gap:8px;margin-top:calc(18px*var(--k,1))}
+html.m .cd2{row-gap:calc(10px*var(--k,1));column-gap:10px;padding:calc(10px*var(--k,1)) 16px calc(10px*var(--k,1)) 16px;font:500 max(var(--fmin,0px),calc(28px*var(--k,1))) 'Poppins',sans-serif}
+html.m .cv2{font:500 max(var(--fmin,0px),calc(24px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .lgrid{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .lcard .xc{padding:calc(14px*var(--k,1)) 14px calc(12px*var(--k,1)) 14px}
+html.m .lv b{font:700 max(var(--fmin,0px),calc(54px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .lv>span{font:500 max(var(--fmin,0px),calc(22px*var(--k,1)))/1.25 'Poppins',sans-serif;margin-top:calc(2px*var(--k,1))}
+html.m .lr{gap:calc(6px*var(--k,1)) 14px;margin-top:calc(8px*var(--k,1));font:500 max(var(--fmin,0px),calc(19px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .mg2{row-gap:calc(8px*var(--k,1));column-gap:8px}
+html.m .gm2 .xc{padding:calc(8px*var(--k,1)) 4px calc(10px*var(--k,1)) 4px;row-gap:calc(4px*var(--k,1));column-gap:4px}
+html.m .gr{font:500 max(var(--fmin,0px),calc(17px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .gres{font:700 max(var(--fmin,0px),calc(26px*var(--k,1)))/1 'Poppins',sans-serif}
+html.m .gbar{height:calc(8px*var(--k,1))}
+html.m .qt{font:500 max(var(--fmin,0px),calc(20px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .legf{gap:calc(6px*var(--k,1)) 20px;font:500 max(var(--fmin,0px),calc(21px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .fcs{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .famc .xc{padding:calc(12px*var(--k,1)) 14px calc(12px*var(--k,1)) 14px}
+html.m .fh b{font:700 max(var(--fmin,0px),calc(28px*var(--k,1)))/1.15 'Poppins',sans-serif}
+html.m .fh>span{font:500 max(var(--fmin,0px),calc(17px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .fm b{font:700 max(var(--fmin,0px),calc(52px*var(--k,1)))/1 'Poppins',sans-serif;margin-top:calc(4px*var(--k,1))}
+html.m .scs{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .scard .xc{row-gap:calc(2px*var(--k,1));padding:calc(16px*var(--k,1)) 62px calc(16px*var(--k,1)) 18px}
+html.m .sn b{font:700 max(var(--fmin,0px),calc(36px*var(--k,1)))/1.15 'Poppins',sans-serif}
+html.m .sn small{font:500 max(var(--fmin,0px),calc(21px*var(--k,1))) 'JetBrains Mono',monospace}
+html.m .sq{font:400 max(var(--fmin,0px),calc(25px*var(--k,1)))/1.35 'Poppins',sans-serif}
+html.m .scard .plus{margin-top:calc(-17px*var(--k,1))}
+html.m .gcard .xc{row-gap:calc(22px*var(--k,1));column-gap:22px;padding:calc(16px*var(--k,1)) 64px calc(16px*var(--k,1)) 22px;min-height:calc(150px*var(--k,1))}
+html.m .gcard .plus{margin-top:calc(-17px*var(--k,1))}
+html.m .gcard .gt{font:700 max(var(--fmin,0px),calc(35px*var(--k,1)))/1.15 'Poppins',sans-serif}
+html.m .gcard .gs{font:500 max(var(--fmin,0px),calc(22px*var(--k,1)))/1.3 'JetBrains Mono',monospace;margin-top:calc(4px*var(--k,1))}
+html.m .gnum b{font:400 max(var(--fmin,0px),calc(100px*var(--k,1)))/.9 'Bebas Neue',sans-serif}
+html.m .gnum small{font:500 max(var(--fmin,0px),calc(19px*var(--k,1)))/1.2 'JetBrains Mono',monospace}
+html.m .gcard.lc .xc{min-height:calc(120px*var(--k,1))}
+html.m .g3.lcs{row-gap:calc(12px*var(--k,1));column-gap:12px}
+html.m .ctw .clogo{height:calc(96px*var(--k,1))}
+html.m .gsm{font:500 max(var(--fmin,0px),calc(17px*var(--k,1)))/1.2 'JetBrains Mono',monospace}
+/* ajustes do celular que precisam vir DEPOIS das regras geradas */
+html.m .rr{height:auto;min-height:calc(66px*var(--k,1));padding-top:6px;padding-bottom:6px}
+html.m .rt{flex-direction:column;align-items:flex-start;gap:0;overflow:visible}
+html.m .rt small{white-space:normal;overflow:visible}
+html.m .gc{grid-template-columns:1fr;row-gap:calc(6px*var(--k,1));align-items:start}
+html.m .ogt{grid-template-columns:minmax(0,1fr) 92px 150px 80px 80px}
+html.m .rkb{grid-template-columns:70px 50px minmax(0,1fr) 110px 110px}
+html.m .tg2{grid-template-columns:1fr;gap:calc(16px*var(--k,1))}
+html.m .fft>div{padding-top:calc(12px*var(--k,1));padding-bottom:calc(12px*var(--k,1))}
+html.m.short .tg2{grid-template-columns:1fr 1fr;gap:calc(22px*var(--k,1))}
+html.m.short .g4{grid-template-columns:1fr 1fr}
+html.m.short .mg{grid-template-columns:repeat(5,1fr)}
+html.ph:not(.short) .vch{grid-template-columns:1fr}
+html.m .vc em{min-width:56px}
+html.m .vt i{font-size:24px;min-height:0}
+html.ph .vt i{font-size:30px}
+html.m .vt{padding-left:2px;padding-right:2px}
+/* conferência de 01/11: componentes que as regras geradas (html.m) atropelavam */
+html.m .rkb.rk2{grid-template-columns:86px 50px minmax(0,1fr) 92px 136px}
+html.m .rkb.r3{grid-template-columns:100px minmax(0,1fr) 120px 150px}
+html.m .rkb.r3 .rt b{white-space:normal;line-height:1.1}
+html.m .tlx .xc{padding:0}
+html.ph #liderancas .tg2{grid-template-columns:1fr 1fr;gap:calc(22px*var(--k,1))}
+html.m .famc .fh b{padding-right:34px}
+html.m .gnum small{max-width:250px;margin-left:auto;white-space:normal}
+html.m .gcard .gt{text-wrap:balance}
+html.m .ct4 .btn small{white-space:nowrap;overflow-wrap:normal}
+html.m .ct4 a:first-of-type{margin-top:auto}
+html.m .cover .impact{font-size:44px;line-height:1.16}
+html.pon .edge{display:none}
+html.x .plus{display:none}
+/* letra mínima no celular: as regras geradas usam max(--fmin, N x k) e o pp.js escolhe --fmin por tela; aqui, o que fica fora delas */
+html.ph .ponto .lb b{font-size:30px}
+html.ph .lgs,html.ph .mf em{font-size:28px}
+html.ph .pb{font-size:36px}html.ph .pb.mini{font-size:30px}html.ph .ptt{font-size:50px}
+html.ph .pbody .rt b{font-size:32px}html.ph .pbody .rt small{font-size:28px}html.ph .pbx .ogt .og{font-size:30px}
+</style></head><body>
+<div class="bgblur"></div>
+<div class="app">
+<header class="chrome"><img src="assets/logo4comm-white.png" alt="4ComM"><div class="lang"><button data-l="br" class="on" aria-label="Português (Brasil)" title="Português (Brasil)"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#009c3b"/><path d="M15 4.5 27 15 15 25.5 3 15z" fill="#ffdf00"/><circle cx="15" cy="15" r="5.6" fill="#002776"/><path d="M9.6 14c3.6-1.1 7.6-.8 10.9 1.4" stroke="#fff" stroke-width="1" fill="none"/></svg></button><button data-l="pt" aria-label="Português (Portugal)" title="Português (Portugal)"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#e42518"/><rect width="12" height="30" fill="#046a38"/><circle cx="12" cy="15" r="5" fill="#ffe000" stroke="#e42518" stroke-width="1"/><circle cx="12" cy="15" r="2.3" fill="#fff"/></svg></button><button data-l="en" aria-label="English (UK)" title="English (UK)"><svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#012169"/><path d="M0 0 60 60M60 0 0 60" stroke="#fff" stroke-width="11"/><path d="M0 0 60 60M60 0 0 60" stroke="#c8102e" stroke-width="4"/><path d="M30 0V60M0 30H60" stroke="#fff" stroke-width="18"/><path d="M30 0V60M0 30H60" stroke="#c8102e" stroke-width="10"/></svg></button><button data-l="es" aria-label="Español" title="Español"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#c60b1e"/><rect y="7.5" width="30" height="15" fill="#ffc400"/></svg></button></div></header>
+<div class="view"><button class="nav p" aria-label="Anterior">‹</button>
+<div class="frame"><div class="stage"><div class="bars"></div><div class="brand"><img src="assets/logo4comm-white.png" alt=""><span class="nm">PLAYER PROFILE · ÍCARO</span><div class="lang mlang"><button data-l="br" class="on" aria-label="Português (Brasil)" title="Português (Brasil)"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#009c3b"/><path d="M15 4.5 27 15 15 25.5 3 15z" fill="#ffdf00"/><circle cx="15" cy="15" r="5.6" fill="#002776"/><path d="M9.6 14c3.6-1.1 7.6-.8 10.9 1.4" stroke="#fff" stroke-width="1" fill="none"/></svg></button><button data-l="pt" aria-label="Português (Portugal)" title="Português (Portugal)"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#e42518"/><rect width="12" height="30" fill="#046a38"/><circle cx="12" cy="15" r="5" fill="#ffe000" stroke="#e42518" stroke-width="1"/><circle cx="12" cy="15" r="2.3" fill="#fff"/></svg></button><button data-l="en" aria-label="English (UK)" title="English (UK)"><svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#012169"/><path d="M0 0 60 60M60 0 0 60" stroke="#fff" stroke-width="11"/><path d="M0 0 60 60M60 0 0 60" stroke="#c8102e" stroke-width="4"/><path d="M30 0V60M0 30H60" stroke="#fff" stroke-width="18"/><path d="M30 0V60M0 30H60" stroke="#c8102e" stroke-width="10"/></svg></button><button data-l="es" aria-label="Español" title="Español"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#c60b1e"/><rect y="7.5" width="30" height="15" fill="#ffc400"/></svg></button></div></div>
+<section class="slide cover" id="capa" data-bg="capa" data-tbr="Capa" data-cbr="Ícaro, atacante do Palmeiras Sub-17, 17 anos." data-tpt="Capa" data-cpt="Ícaro, atacante do Palmeiras Sub-17, 17 anos." data-ten="Cover" data-cen="Ícaro, Palmeiras under-17s forward, 17 years old." data-tes="Portada" data-ces="Ícaro, delantero del Palmeiras Sub-17, 17 años.">
+<div class="pic zoom" style="background-image:url(assets/fotos/capa.jpg);background-position:50% 18%"></div><div class="veil"></div><div class="grade"></div>
+<div class="wrap">
+  <h1>ÍCARO</h1>
+  <p class="impact"><span class="i br">Uma das grandes promessas do futebol brasileiro: atacante com 19 gols nas competições de federação em 2026 e campeão e artilheiro da <span class="nb">Copa Fictor</span>.</span><span class="i pt">Uma das grandes promessas do futebol brasileiro: atacante com 19 golos nas competições de federação em 2026 e campeão e artilheiro da <span class="nb">Copa Fictor</span>.</span><span class="i en">One of the great prospects of Brazilian football: a forward with 19 goals in the federation competitions in 2026, and champion and top scorer of the <span class="nb">Copa Fictor</span>.</span><span class="i es">Una de las grandes promesas del fútbol brasileño: delantero con 19 goles en las competiciones de federación en 2026 y campeón y goleador de la <span class="nb">Copa Fictor</span>.</span></p>
+  <div class="cbx">
+    <div class="cb c2"><small><span class="i br">POSIÇÃO</span><span class="i pt">POSIÇÃO</span><span class="i en">POSITION</span><span class="i es">POSICIÓN</span></small><div class="cv"><span class="i br">Atacante</span><span class="i pt">Atacante</span><span class="i en">Forward</span><span class="i es">Delantero</span></div></div>
+    <div class="cb c2"><small><span class="i br">CLUBE</span><span class="i pt">CLUBE</span><span class="i en">CLUB</span><span class="i es">CLUB</span></small><div class="cv"><span class="cr cbc"><img src="assets/escudos/palmeiras.svg" alt=""></span><span>Palmeiras</span></div></div>
+    <div class="cb c2"><small><span class="i br">CATEGORIA</span><span class="i pt">CATEGORIA</span><span class="i en">AGE GROUP</span><span class="i es">CATEGORÍA</span></small><div class="cv">Sub-17</div></div>
+    <div class="cb c3"><small><span class="i br">NASCIMENTO</span><span class="i pt">NASCIMENTO</span><span class="i en">BORN</span><span class="i es">NACIMIENTO</span></small><div class="cv">2009</div></div>
+    <div class="cb c3"><small><span class="i br">IDADE</span><span class="i pt">IDADE</span><span class="i en">AGE</span><span class="i es">EDAD</span></small><div class="cv"><span class="i br"><span class="nb">17 anos</span></span><span class="i pt"><span class="nb">17 anos</span></span><span class="i en"><span class="nb">17 years old</span></span><span class="i es"><span class="nb">17 años</span></span></div></div>
+  </div>
+</div></section><section class="slide " id="ficha" data-bg="sorriso" data-tbr="Ficha" data-cbr="Ficha: destro, 1,81 m, camisa 9, atacante do Palmeiras Sub-17." data-tpt="Ficha" data-cpt="Ficha: destro, 1,81 m, camisola 9, atacante do Palmeiras Sub-17." data-ten="Player file" data-cen="Player file: right-footed, 1.81 m, shirt 9, Palmeiras under-17s forward." data-tes="Ficha" data-ces="Ficha: diestro, 1,81 m, dorsal 9, delantero del Palmeiras Sub-17.">
+<div class="wrap">
+  <div style="display:flex;gap:calc(26px*var(--k,1) + var(--gx,0px));align-items:stretch;flex:none">
+    <div class="fph" style="width:430px;height:calc(560px*var(--k,1));flex:none;background-image:url(assets/fotos/elenco.jpg);background-size:cover;background-position:50% 12%;animation:none"></div>
+    <div class="fgrid" style="grid-template-columns:1fr;flex:1;align-content:space-between">
+      <div class="fc "><div class="fk"><span class="i br">Nome</span><span class="i pt">Nome</span><span class="i en">Name</span><span class="i es">Nombre</span></div><div class="fv">Icaro Ronaldo Trajano Vidal</div></div>
+      <div class="fc "><div class="fk"><span class="i br">Nascimento</span><span class="i pt">Nascimento</span><span class="i en">Born</span><span class="i es">Nacimiento</span></div><div class="fv"><span class="i br">25/01/2009 · <span class="nb">17 anos</span></span><span class="i pt">25/01/2009 · <span class="nb">17 anos</span></span><span class="i en">25 January 2009 · <span class="nb">17 years old</span></span><span class="i es">25/01/2009 · <span class="nb">17 años</span></span></div></div>
+      <div class="fc "><div class="fk"><span class="i br">Posição</span><span class="i pt">Posição</span><span class="i en">Position</span><span class="i es">Posición</span></div><div class="fv"><span class="i br">Atacante</span><span class="i pt">Atacante</span><span class="i en">Forward</span><span class="i es">Delantero</span></div></div>
+      <div class="fc "><div class="fk"><span class="i br">Clube</span><span class="i pt">Clube</span><span class="i en">Club</span><span class="i es">Club</span></div><div class="fv">Palmeiras Sub-17</div></div>
+    </div>
+  </div>
+  <div class="strip3"><div class="c3"><small><span class="i br">CAMISA</span><span class="i pt">CAMISOLA</span><span class="i en">SHIRT</span><span class="i es">DORSAL</span></small><b style="font-size:calc(44px*var(--k,1))">9</b></div><div class="c3"><small><span class="i br">ALTURA</span><span class="i pt">ALTURA</span><span class="i en">HEIGHT</span><span class="i es">ALTURA</span></small><b style="font-size:calc(44px*var(--k,1))"><span class="i br">1,81 m</span><span class="i pt">1,81 m</span><span class="i en">1.81 m</span><span class="i es">1,81 m</span></b></div><div class="c3"><small><span class="i br">PÉ</span><span class="i pt">PÉ</span><span class="i en">FOOT</span><span class="i es">PIE</span></small><b style="font-size:calc(44px*var(--k,1))"><span class="i br">Direito</span><span class="i pt">Direito</span><span class="i en">Right</span><span class="i es">Derecho</span></b></div></div>
+  <div class="ctx"><span class="i br">BRASILEIRO SUB-17 · 2026</span><span class="i pt">BRASILEIRO SUB-17 · 2026</span><span class="i en">BRAZILIAN <span class="nb">U-17</span> · 2026</span><span class="i es">BRASILEIRO SUB-17 · 2026</span></div><div class="strip3"><div class="c3"><b><b class="up" data-v="20" data-d="0" data-s="">20</b></b><small><span class="i br">jogos</span><span class="i pt">jogos</span><span class="i en">games</span><span class="i es">partidos</span></small></div><div class="c3"><b><b class="up" data-v="1357" data-d="0" data-s="">1.357</b></b><small><span class="i br">minutos</span><span class="i pt">minutos</span><span class="i en">minutes</span><span class="i es">minutos</span></small></div><div class="c3"><b><b class="up" data-v="9" data-d="0" data-s="">9</b></b><small><span class="i br">gols</span><span class="i pt">golos</span><span class="i en">goals</span><span class="i es">goles</span></small></div></div>
+  <div class="ctx"><span class="i br">PAULISTA SUB-17 · 2026</span><span class="i pt">PAULISTA SUB-17 · 2026</span><span class="i en">SÃO PAULO <span class="nb">U-17</span> · 2026</span><span class="i es">PAULISTA SUB-17 · 2026</span></div><div class="strip3"><div class="c3"><b><b class="up" data-v="11" data-d="0" data-s="">11</b></b><small><span class="i br">jogos</span><span class="i pt">jogos</span><span class="i en">games</span><span class="i es">partidos</span></small></div><div class="c3"><b><b class="up" data-v="439" data-d="0" data-s="">439</b></b><small><span class="i br">minutos</span><span class="i pt">minutos</span><span class="i en">minutes</span><span class="i es">minutos</span></small></div><div class="c3"><b><b class="up" data-v="10" data-d="0" data-s="">10</b></b><small><span class="i br">gols</span><span class="i pt">golos</span><span class="i en">goals</span><span class="i es">goles</span></small></div></div>
+</div></section><section class="slide " id="visao" data-bg="sorriso" data-tbr="Visão geral" data-cbr="Uma das grandes promessas do futebol brasileiro: 19 gols nas competições de federação em 2026." data-tpt="Visão geral" data-cpt="Uma das grandes promessas do futebol brasileiro: 19 golos nas competições de federação em 2026." data-ten="Overview" data-cen="One of the great prospects of Brazilian football: 19 goals in the federation competitions in 2026." data-tes="Visión general" data-ces="Una de las grandes promesas del fútbol brasileño: 19 goles en las competiciones de federación en 2026.">
+<div class="wrap">
+  <div class="kick"><span class="i br">VISÃO GERAL</span><span class="i pt">VISÃO GERAL</span><span class="i en">OVERVIEW</span><span class="i es">VISIÓN GENERAL</span></div>
+  <h2><span class="i br">Uma das grandes promessas do futebol brasileiro, com faro de gol e títulos</span><span class="i pt">Uma das grandes promessas do futebol brasileiro, com faro de golo e títulos</span><span class="i en">One of the great prospects of Brazilian football, with a nose for goal and trophies</span><span class="i es">Una de las grandes promesas del fútbol brasileño, con olfato de gol y títulos</span></h2>
+  <div style="display:flex;gap:calc(26px*var(--k,1) + var(--gx,0px));align-items:flex-start;flex:none">
+    <div class="fph" style="width:400px;height:calc(520px*var(--k,1));flex:none;background-image:url(assets/fotos/chute.jpg);background-size:cover;background-position:50% 10%;animation:none"></div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:calc(18px*var(--k,1) + var(--gx,0px))">
+      <p class="t t1"><span class="i br">Ícaro é <b>atacante do Palmeiras <span class="nb">Sub-17</span></b> e vive uma temporada de artilheiro: <b>19 gols nas competições de federação</b>, 9 no <span class="nb">Brasileiro Sub-17</span> e 10 no <span class="nb">Paulista Sub-17</span>, um gol a cada <b>95 minutos</b>.</span><span class="i pt">Ícaro é <b>atacante do Palmeiras <span class="nb">Sub-17</span></b> e vive uma temporada de artilheiro: <b>19 golos nas competições de federação</b>, 9 no <span class="nb">Brasileiro Sub-17</span> e 10 no <span class="nb">Paulista Sub-17</span>, um golo a cada <b>95 minutos</b>.</span><span class="i en">Ícaro is a <b>Palmeiras <span class="nb">under-17s</span> forward</b> having a top-scorer season: <b>19 goals in the federation competitions</b>, 9 in the Brazilian <span class="nb">U-17</span> and 10 in the São Paulo <span class="nb">U-17</span>, one every <b>95 minutes</b>.</span><span class="i es">Ícaro es <b>delantero del Palmeiras <span class="nb">Sub-17</span></b> y vive una temporada de goleador: <b>19 goles en las competiciones de federación</b>, 9 en el <span class="nb">Brasileiro Sub-17</span> y 10 en el <span class="nb">Paulista Sub-17</span>, uno cada <b>95 minutos</b>.</span></p>
+      <p class="t t1"><span class="i br">Fez <b>2 hat-tricks</b> em 2026: 3 gols no Vitória (Brasileiro) e 3 no União Mogi (Paulista). É titular nos dois campeonatos: <b>19 dos 20 jogos</b> do Brasileiro e 6 dos 11 do Paulista.</span><span class="i pt">Fez <b>2 hat-tricks</b> em 2026: 3 golos no Vitória (Brasileiro) e 3 no União Mogi (Paulista). É titular nos dois campeonatos: <b>19 dos 20 jogos</b> do Brasileiro e 6 dos 11 do Paulista.</span><span class="i en">He got <b>2 hat-tricks</b> in 2026: 3 goals against Vitória (Brazilian championship) and 3 against União Mogi (São Paulo championship). He starts in both championships: <b>19 of the 20 games</b> in the Brazilian <span class="nb">U-17</span> and 6 of the 11 in the São Paulo <span class="nb">U-17</span>.</span><span class="i es">Hizo <b>2 hat-tricks</b> en 2026: 3 goles al Vitória (Brasileiro) y 3 al União Mogi (Paulista). Es titular en los dos campeonatos: <b>19 de los 20 partidos</b> del Brasileiro y 6 de los 11 del Paulista.</span></p>
+    </div>
+  </div>
+  <p class="t t1"><span class="i br">Faz gol e conquista títulos: <b>campeão e artilheiro da <span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span></b> (4 gols), <b>campeão da Nexperia Nijmegen Cup</b>, na Holanda, e antes <b>campeão do Paulista <span class="nb">Sub-15</span> de 2024</b> pelo Palmeiras. O Palmeiras venceu 14 dos 20 jogos do Brasileiro e os 11 do Paulista em que ele atuou. Está no clube desde 2023.</span><span class="i pt">Faz golo e conquista títulos: <b>campeão e artilheiro da <span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span></b> (4 golos), <b>campeão da Nexperia Nijmegen Cup</b>, na Holanda, e antes <b>campeão do Paulista <span class="nb">Sub-15</span> de 2024</b> pelo Palmeiras. O Palmeiras venceu 14 dos 20 jogos do Brasileiro e os 11 do Paulista em que ele atuou. Está no clube desde 2023.</span><span class="i en">He scores and wins trophies: <b>champion and top scorer of the <span class="nb">Copa Fictor</span> <span class="nb">U-17</span></b> (4 goals), <b>champion of the Nexperia Nijmegen Cup</b> in the Netherlands, and earlier <b>2024 São Paulo <span class="nb">U-15</span> champion</b> with Palmeiras. Palmeiras won 14 of the 20 Brazilian <span class="nb">U-17</span> games and all 11 São Paulo <span class="nb">U-17</span> games he played. He has been at the club since 2023.</span><span class="i es">Marca y conquista títulos: <b>campeón y goleador de la <span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span></b> (4 goles), <b>campeón de la Nexperia Nijmegen Cup</b>, en los Países Bajos, y antes <b>campeón del Paulista <span class="nb">Sub-15</span> de 2024</b> con el Palmeiras. El Palmeiras ganó 14 de los 20 partidos del Brasileiro y los 11 del Paulista en que jugó. Está en el club desde 2023.</span></p>
+</div></section><section class="slide " id="trajetoria" data-bg="chute" data-tbr="Trajetória" data-cbr="Do Náutico ao Palmeiras Sub-17: campeão Paulista Sub-15 em 2024, campeão e artilheiro da Copa Fictor em 2026." data-tpt="Trajetória" data-cpt="Do Náutico ao Palmeiras Sub-17: campeão Paulista Sub-15 em 2024, campeão e artilheiro da Copa Fictor em 2026." data-ten="Career path" data-cen="From Náutico to Palmeiras under-17s: 2024 São Paulo U-15 champion, 2026 Copa Fictor champion and top scorer." data-tes="Trayectoria" data-ces="Del Náutico al Palmeiras Sub-17: campeón Paulista Sub-15 en 2024, campeón y goleador de la Copa Fictor en 2026.">
+<div class="wrap">
+  <div class="kick"><span class="i br">TRAJETÓRIA</span><span class="i pt">TRAJETÓRIA</span><span class="i en">CAREER PATH</span><span class="i es">TRAYECTORIA</span></div>
+  <h2><span class="i br">Da base do Náutico ao atacante campeão do Palmeiras <span class="nb">Sub-17</span></span><span class="i pt">Da base do Náutico ao atacante campeão do Palmeiras <span class="nb">Sub-17</span></span><span class="i en">From the Náutico academy to Palmeiras' champion <span class="nb">under-17s</span> forward</span><span class="i es">De la base del Náutico al delantero campeón del Palmeiras <span class="nb">Sub-17</span></span></h2>
+  <div class="trilha"><div class="xw tnode "><button class="xc" type="button"><span class="tdot"></span><span class="cr tpc"><img src="assets/escudos/nautico.png" alt=""></span><div class="tbd"><div class="tpn">Náutico <span class="tpy">2022</span><span class="tag base"><span class="i br">BASE</span><span class="i pt">BASE</span><span class="i en">ACADEMY</span><span class="i es">BASE</span></span></div><div class="tpd"><span class="i br"><span class="nb">Sub-15</span></span><span class="i pt"><span class="nb">Sub-15</span></span><span class="i en">Under-15s</span><span class="i es"><span class="nb">Sub-15</span></span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br">Náutico · 2022</span><span class="i pt">Náutico · 2022</span><span class="i en">Náutico · 2022</span><span class="i es">Náutico · 2022</span></div><p class="pb"><span class="i br"><span class="nb">Sub-15</span>.</span><span class="i pt"><span class="nb">Sub-15</span>.</span><span class="i en">Under-15s.</span><span class="i es"><span class="nb">Sub-15</span>.</span></p></div></div><div class="xw tnode "><button class="xc" type="button"><span class="tdot"></span><span class="cr tpc"><img src="assets/escudos/palmeiras.svg" alt=""></span><div class="tbd"><div class="tpn">Palmeiras <span class="tpy">2023</span><span class="tag base"><span class="i br">BASE</span><span class="i pt">BASE</span><span class="i en">ACADEMY</span><span class="i es">BASE</span></span></div><div class="tpd"><span class="i br"><span class="nb">Sub-14</span> e <span class="nb">Sub-15</span></span><span class="i pt"><span class="nb">Sub-14</span> e <span class="nb">Sub-15</span></span><span class="i en">Under-14s and under-15s</span><span class="i es"><span class="nb">Sub-14</span> y <span class="nb">Sub-15</span></span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br">Palmeiras · 2023</span><span class="i pt">Palmeiras · 2023</span><span class="i en">Palmeiras · 2023</span><span class="i es">Palmeiras · 2023</span></div><p class="pb"><span class="i br">Chegou ao Palmeiras e jogou nas categorias <span class="nb">Sub-14</span> e <span class="nb">Sub-15</span>.</span><span class="i pt">Chegou ao Palmeiras e jogou nas categorias <span class="nb">Sub-14</span> e <span class="nb">Sub-15</span>.</span><span class="i en">He joined Palmeiras and played in the under-14 and under-15 age groups.</span><span class="i es">Llegó al Palmeiras y jugó en las categorías <span class="nb">Sub-14</span> y <span class="nb">Sub-15</span>.</span></p></div></div><div class="xw tnode "><button class="xc" type="button"><span class="tdot"></span><span class="cr tpc"><img src="assets/escudos/palmeiras.svg" alt=""></span><div class="tbd"><div class="tpn">Palmeiras <span class="tpy">2024</span><span class="tag base"><span class="i br">BASE</span><span class="i pt">BASE</span><span class="i en">ACADEMY</span><span class="i es">BASE</span></span></div><div class="tpd"><span class="i br"><span class="nb">Sub-15</span> · campeão do Paulista <span class="nb">Sub-15</span></span><span class="i pt"><span class="nb">Sub-15</span> · campeão do Paulista <span class="nb">Sub-15</span></span><span class="i en">Under-15s · São Paulo <span class="nb">U-15</span> champion</span><span class="i es"><span class="nb">Sub-15</span> · campeón del Paulista <span class="nb">Sub-15</span></span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br">Palmeiras · 2024</span><span class="i pt">Palmeiras · 2024</span><span class="i en">Palmeiras · 2024</span><span class="i es">Palmeiras · 2024</span></div><p class="pb"><span class="i br">Campeão do Campeonato Paulista <span class="nb">Sub-15</span> de 2024 pelo Palmeiras.</span><span class="i pt">Campeão do Campeonato Paulista <span class="nb">Sub-15</span> de 2024 pelo Palmeiras.</span><span class="i en">Champion of the 2024 São Paulo <span class="nb">U-15</span> Championship with Palmeiras.</span><span class="i es">Campeón del Campeonato Paulista <span class="nb">Sub-15</span> de 2024 con el Palmeiras.</span></p></div></div><div class="xw tnode "><button class="xc" type="button"><span class="tdot"></span><span class="cr tpc"><img src="assets/escudos/palmeiras.svg" alt=""></span><div class="tbd"><div class="tpn">Palmeiras <span class="tpy">2025</span><span class="tag base"><span class="i br">BASE</span><span class="i pt">BASE</span><span class="i en">ACADEMY</span><span class="i es">BASE</span></span></div><div class="tpd"><span class="i br"><span class="nb">Sub-17</span> · 11 jogos e 6 gols</span><span class="i pt"><span class="nb">Sub-17</span> · 11 jogos e 6 golos</span><span class="i en"><span class="nb">Under-17s</span> · 11 games and 6 goals</span><span class="i es"><span class="nb">Sub-17</span> · 11 partidos y 6 goles</span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br">Palmeiras · 2025</span><span class="i pt">Palmeiras · 2025</span><span class="i en">Palmeiras · 2025</span><span class="i es">Palmeiras · 2025</span></div><p class="pb"><span class="i br">Primeira temporada no <span class="nb">Sub-17</span>: 11 jogos e 6 gols.</span><span class="i pt">Primeira temporada no <span class="nb">Sub-17</span>: 11 jogos e 6 golos.</span><span class="i en">First season with the <span class="nb">under-17s</span>: 11 games and 6 goals.</span><span class="i es">Primera temporada en el <span class="nb">Sub-17</span>: 11 partidos y 6 goles.</span></p></div></div><div class="xw tnode cur"><button class="xc" type="button"><span class="tdot"></span><span class="cr tpc"><img src="assets/escudos/palmeiras.svg" alt=""></span><div class="tbd"><div class="tpn">Palmeiras <span class="tpy">2026</span><span class="tag base"><span class="i br">BASE</span><span class="i pt">BASE</span><span class="i en">ACADEMY</span><span class="i es">BASE</span></span></div><div class="tpd"><span class="i br"><span class="nb">Sub-17</span> · campeão da <span class="nb">Copa Fictor</span> (artilheiro) e da Nijmegen Cup</span><span class="i pt"><span class="nb">Sub-17</span> · campeão da <span class="nb">Copa Fictor</span> (artilheiro) e da Nijmegen Cup</span><span class="i en"><span class="nb">Under-17s</span> · <span class="nb">Copa Fictor</span> champion (top scorer) and Nijmegen Cup champion</span><span class="i es"><span class="nb">Sub-17</span> · campeón de la <span class="nb">Copa Fictor</span> (goleador) y de la Nijmegen Cup</span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br">Palmeiras · 2026</span><span class="i pt">Palmeiras · 2026</span><span class="i en">Palmeiras · 2026</span><span class="i es">Palmeiras · 2026</span></div><p class="pb"><span class="i br">Campeão e artilheiro da primeira <span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> (janeiro), com 4 gols, um em cada um dos 4 jogos que o texto do clube cita.</span><span class="i pt">Campeão e artilheiro da primeira <span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> (janeiro), com 4 golos, um em cada um dos 4 jogos que o texto do clube cita.</span><span class="i en">Champion and top scorer of the first <span class="nb">Copa Fictor</span> <span class="nb">U-17</span> (January), with 4 goals, one in each of the 4 games the club's report mentions.</span><span class="i es">Campeón y goleador de la primera <span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> (enero), con 4 goles, uno en cada uno de los 4 partidos que cita el texto del club.</span></p><p class="pb"><span class="i br">Campeão da Nexperia Nijmegen Cup, na Holanda (26/04).</span><span class="i pt">Campeão da Nexperia Nijmegen Cup, na Holanda (26/04).</span><span class="i en">Champion of the Nexperia Nijmegen Cup in the Netherlands (26 Apr).</span><span class="i es">Campeón de la Nexperia Nijmegen Cup, en los Países Bajos (26/04).</span></p></div></div></div>
+  <div class="ctx"><span class="i br">TOQUE EM UM ANO PARA VER O DETALHE</span><span class="i pt">TOQUE EM UM ANO PARA VER O DETALHE</span><span class="i en">TAP A YEAR FOR DETAIL</span><span class="i es">TOCA UN AÑO PARA VER EL DETALLE</span></div>
+</div></section><section class="slide " id="competicoes" data-bg="chute" data-tbr="Competições de 2026" data-cbr="Brasileiro e Paulista Sub-17 e os demais torneios de 2026: Copa Fictor, Copa Ibrachina e Nijmegen Cup." data-tpt="Competições de 2026" data-cpt="Brasileiro e Paulista Sub-17 e os demais torneios de 2026: Copa Fictor, Copa Ibrachina e Nijmegen Cup." data-ten="2026 competitions" data-cen="Brazilian and São Paulo U-17 and the other 2026 tournaments: Copa Fictor, Copa Ibrachina and the Nijmegen Cup." data-tes="Competiciones de 2026" data-ces="Brasileiro y Paulista Sub-17 y los demás torneos de 2026: Copa Fictor, Copa Ibrachina y Nijmegen Cup.">
+<div class="wrap">
+  <div class="kick"><span class="i br">2026 · COMPETIÇÕES DE FEDERAÇÃO</span><span class="i pt">2026 · COMPETIÇÕES DE FEDERAÇÃO</span><span class="i en">2026 · FEDERATION COMPETITIONS</span><span class="i es">2026 · COMPETICIONES DE FEDERACIÓN</span></div>
+  <h2><span class="i br">Brasileiro e <span class="nb">Paulista Sub-17</span>, separados dos demais torneios</span><span class="i pt">Brasileiro e <span class="nb">Paulista Sub-17</span>, separados dos demais torneios</span><span class="i en">Brazilian and São Paulo <span class="nb">U-17</span>, kept apart from the other tournaments</span><span class="i es">Brasileiro y <span class="nb">Paulista Sub-17</span>, separados de los demás torneos</span></h2>
+  <div class="ogt fed4"><div class="og h"><span class="i br">Competição</span><span class="i pt">Competição</span><span class="i en">Competition</span><span class="i es">Competición</span></div><div class="og h onum"><span class="i br">J</span><span class="i pt">J</span><span class="i en">GP</span><span class="i es">PJ</span></div><div class="og h onum">Min</div><div class="og h onum">G</div><div class="og"><span class="i br"><span class="nb">Brasileiro Sub-17</span></span><span class="i pt"><span class="nb">Brasileiro Sub-17</span></span><span class="i en">Brazilian <span class="nb">U-17</span> Championship</span><span class="i es"><span class="nb">Brasileiro Sub-17</span></span></div><div class="og onum">20</div><div class="og onum"><span class="i br">1.357</span><span class="i pt">1.357</span><span class="i en">1,357</span><span class="i es">1.357</span></div><div class="og onum">9</div><div class="og"><span class="i br"><span class="nb">Paulista Sub-17</span></span><span class="i pt"><span class="nb">Paulista Sub-17</span></span><span class="i en">São Paulo State <span class="nb">U-17</span> Championship</span><span class="i es"><span class="nb">Paulista Sub-17</span></span></div><div class="og onum">11</div><div class="og onum"><span class="i br">439</span><span class="i pt">439</span><span class="i en">439</span><span class="i es">439</span></div><div class="og onum">10</div></div>
+  <div class="ctx"><span class="i br">OUTROS TORNEIOS · TOQUE PARA VER</span><span class="i pt">OUTROS TORNEIOS · TOQUE PARA VER</span><span class="i en">OTHER TOURNAMENTS · TAP TO SEE</span><span class="i es">OTROS TORNEOS · TOCA PARA VER</span></div>
+  <div class="trilha"><div class="xw tnode cur"><button class="xc" type="button"><span class="tdot"></span><span class="cr tpc"><img src="assets/escudos/palmeiras.svg" alt=""></span><div class="tbd"><div class="tpn">Copa Fictor Sub-17<span class="tag base"><span class="i br">JAN</span><span class="i pt">JAN</span><span class="i en">JAN</span><span class="i es">ENE</span></span></div><div class="tpd"><span class="i br">Campeão · artilheiro com 4 gols</span><span class="i pt">Campeão · artilheiro com 4 golos</span><span class="i en">Champion · top scorer with 4 goals</span><span class="i es">Campeón · goleador con 4 goles</span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br"><span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> · janeiro</span><span class="i pt"><span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> · janeiro</span><span class="i en"><span class="nb">Copa Fictor</span> <span class="nb">U-17</span> · January</span><span class="i es"><span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> · enero</span></div><p class="pb"><span class="i br">Primeira edição, organizada pelo Palmeiras. O Palmeiras venceu Burkina Faso por 1 a 0 na final (notícia de 29/01). Ícaro fez 1 gol em cada um dos 4 jogos citados: 22/01 (2 x 2 Internacional), 23/01 (4 x 1 Guarani), 24/01 (Jacuipense) e 28/01 (3 x 1 São Paulo).</span><span class="i pt">Primeira edição, organizada pelo Palmeiras. O Palmeiras venceu Burkina Faso por 1 a 0 na final (notícia de 29/01). Ícaro fez 1 golo em cada um dos 4 jogos citados: 22/01 (2 x 2 Internacional), 23/01 (4 x 1 Guarani), 24/01 (Jacuipense) e 28/01 (3 x 1 São Paulo).</span><span class="i en">First edition, organised by Palmeiras. Palmeiras beat Burkina Faso 1-0 in the final (report of 29 Jan). Ícaro scored 1 goal in each of the 4 games cited: 22 Jan (2-2 Internacional), 23 Jan (4-1 Guarani), 24 Jan (Jacuipense) and 28 Jan (3-1 São Paulo).</span><span class="i es">Primera edición, organizada por el Palmeiras. El Palmeiras venció a Burkina Faso 1-0 en la final (noticia del 29/01). Ícaro marcó 1 gol en cada uno de los 4 partidos citados: 22/01 (2-2 Internacional), 23/01 (4-1 Guarani), 24/01 (Jacuipense) y 28/01 (3-1 São Paulo).</span></p></div></div><div class="xw tnode "><button class="xc" type="button"><span class="tdot"></span><span class="cr tpc"><img src="assets/escudos/palmeiras.svg" alt=""></span><div class="tbd"><div class="tpn">Nexperia Nijmegen Cup<span class="tag base"><span class="i br">ABR</span><span class="i pt">ABR</span><span class="i en">APR</span><span class="i es">ABR</span></span></div><div class="tpd"><span class="i br">Campeão · torneio na Holanda</span><span class="i pt">Campeão · torneio na Holanda</span><span class="i en">Champion · tournament in the Netherlands</span><span class="i es">Campeón · torneo en los Países Bajos</span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br">Nexperia Nijmegen Cup · abril</span><span class="i pt">Nexperia Nijmegen Cup · abril</span><span class="i en">Nexperia Nijmegen Cup · April</span><span class="i es">Nexperia Nijmegen Cup · abril</span></div><p class="pb"><span class="i br">O Palmeiras <span class="nb">Sub-17</span> foi campeão invicto e sem sofrer gols (3 x 0 no Nijmegen na final, 26/04).</span><span class="i pt">O Palmeiras <span class="nb">Sub-17</span> foi campeão invicto e sem sofrer golos (3 x 0 no Nijmegen na final, 26/04).</span><span class="i en">Palmeiras <span class="nb">under-17s</span> won the title unbeaten and without conceding (3-0 against Nijmegen in the final, 26 Apr).</span><span class="i es">El Palmeiras <span class="nb">Sub-17</span> fue campeón invicto y sin recibir goles (3-0 al Nijmegen en la final, 26/04).</span></p></div></div><div class="xw tnode "><button class="xc" type="button"><span class="tdot"></span><span class="cr tpc"><img src="assets/escudos/palmeiras.svg" alt=""></span><div class="tbd"><div class="tpn">Copa Ibrachina Sub-17<span class="tag base"><span class="i br">FEV-ABR</span><span class="i pt">FEV-ABR</span><span class="i en">FEB-APR</span><span class="i es">FEB-ABR</span></span></div><div class="tpd"><span class="i br">4 jogos · 267 minutos · 1 gol</span><span class="i pt">4 jogos · 267 minutos · 1 golo</span><span class="i en">4 games · 267 minutes · 1 goal</span><span class="i es">4 partidos · 267 minutos · 1 gol</span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br"><span class="nb">Copa Ibrachina</span> <span class="nb">Sub-17</span></span><span class="i pt"><span class="nb">Copa Ibrachina</span> <span class="nb">Sub-17</span></span><span class="i en"><span class="nb">Copa Ibrachina</span> <span class="nb">U-17</span></span><span class="i es"><span class="nb">Copa Ibrachina</span> <span class="nb">Sub-17</span></span></div><p class="pb"><span class="i br">Quatro jogos como titular entre 28/02 e 04/04, com 1 gol (13/03, 3 x 2 no Red Bull Bragantino).</span><span class="i pt">Quatro jogos como titular entre 28/02 e 04/04, com 1 golo (13/03, 3 x 2 no Red Bull Bragantino).</span><span class="i en">Four starts between 28 Feb and 4 Apr, with 1 goal (13 Mar, 3-2 against Red Bull Bragantino).</span><span class="i es">Cuatro partidos de titular entre el 28/02 y el 04/04, con 1 gol (13/03, 3-2 al Red Bull Bragantino).</span></p></div></div></div>
+  <div class="nota"><span class="i br">Brasileiro e <span class="nb">Paulista Sub-17</span> são as competições de federação, com jogo a jogo completo. Os torneios abaixo têm outras fontes e não somam aos números acima.</span><span class="i pt">Brasileiro e <span class="nb">Paulista Sub-17</span> são as competições de federação, com jogo a jogo completo. Os torneios abaixo têm outras fontes e não somam aos números acima.</span><span class="i en">The Brazilian and São Paulo <span class="nb">U-17</span> are the federation competitions, with a full game-by-game record. The tournaments below have other sources and are not added to the figures above.</span><span class="i es">El Brasileiro y el <span class="nb">Paulista Sub-17</span> son las competiciones de federación, con registro completo partido a partido. Los torneos de abajo tienen otras fuentes y no se suman a las cifras de arriba.</span></div>
+</div></section><section class="slide " id="minutos" data-bg="comemora" data-tbr="Minutos por gol" data-cbr="Um gol a cada 95 minutos: 0,95 gol por 90 minutos em 2026." data-tpt="Minutos por golo" data-cpt="Um golo a cada 95 minutos: 0,95 golo por 90 minutos em 2026." data-ten="Minutes per goal" data-cen="A goal every 95 minutes: 0.95 goals per 90 minutes in 2026." data-tes="Minutos por gol" data-ces="Un gol cada 95 minutos: 0,95 goles por 90 minutos en 2026.">
+<div class="wrap">
+  <div class="kick"><span class="i br">MINUTOS POR GOL</span><span class="i pt">MINUTOS POR GOLO</span><span class="i en">MINUTES PER GOAL</span><span class="i es">MINUTOS POR GOL</span></div>
+  <h2><span class="i br">Um gol a cada 95 minutos</span><span class="i pt">Um golo a cada 95 minutos</span><span class="i en">A goal every 95 minutes</span><span class="i es">Un gol cada 95 minutos</span></h2>
+  <div class="strip3"><div class="c3"><b><b class="up" data-v="94.52631578947368" data-d="1" data-s="">94,5</b></b><small><span class="i br">min por gol, geral</span><span class="i pt">min por golo, geral</span><span class="i en">min per goal, overall</span><span class="i es">min por gol, total</span></small></div><div class="c3"><b><b class="up" data-v="150.77777777777777" data-d="1" data-s="">150,8</b></b><small><span class="i br">min por gol no Brasileiro</span><span class="i pt">min por golo no Brasileiro</span><span class="i en">min per goal, Brazilian</span><span class="i es">min por gol, Brasileiro</span></small></div><div class="c3"><b><b class="up" data-v="43.9" data-d="1" data-s="">43,9</b></b><small><span class="i br">min por gol no Paulista</span><span class="i pt">min por golo no Paulista</span><span class="i en">min per goal, Paulista</span><span class="i es">min por gol, Paulista</span></small></div></div>
+  <p class="t t1"><span class="i br">Em 90 minutos de jogo, a média é de <b>0,95 gol</b> (19 gols em 1.796 minutos, somando o Brasileiro e o <span class="nb">Paulista Sub-17</span>).</span><span class="i pt">Em 90 minutos de jogo, a média é de <b>0,95 golo</b> (19 golos em 1.796 minutos, somando o Brasileiro e o <span class="nb">Paulista Sub-17</span>).</span><span class="i en">Over 90 minutes of play, the average is <b>0.95 goals</b> (19 goals in 1,796 minutes, adding the Brazilian and São Paulo <span class="nb">U-17</span>).</span><span class="i es">En 90 minutos de juego, el promedio es de <b>0,95 goles</b> (19 goles en 1.796 minutos, sumando el Brasileiro y el <span class="nb">Paulista Sub-17</span>).</span></p>
+  <p class="t t1"><span class="i br">Marcou em <b>7 dos 20 jogos</b> do Brasileiro (um gol a cada 151 minutos) e em <b>6 dos 11</b> do Paulista (um a cada 44). Fez um hat-trick em cada torneio.</span><span class="i pt">Marcou em <b>7 dos 20 jogos</b> do Brasileiro (um golo a cada 151 minutos) e em <b>6 dos 11</b> do Paulista (um a cada 44). Fez um hat-trick em cada torneio.</span><span class="i en">He scored in <b>7 of the 20 games</b> of the Brazilian championship (a goal every 151 minutes) and in <b>6 of the 11</b> of the São Paulo championship (one every 44). He got one hat-trick in each tournament.</span><span class="i es">Marcó en <b>7 de los 20 partidos</b> del Brasileiro (un gol cada 151 minutos) y en <b>6 de los 11</b> del Paulista (uno cada 44). Hizo un hat-trick en cada torneo.</span></p>
+  <div class="nota"><span class="i br">Gols, minutos e jogos de 2026 no Paulista e no <span class="nb">Brasileiro Sub-17</span>. Minutos por gol = minutos em campo ÷ gols.</span><span class="i pt">Golos, minutos e jogos de 2026 no Paulista e no <span class="nb">Brasileiro Sub-17</span>. Minutos por golo = minutos em campo ÷ golos.</span><span class="i en">2026 goals, minutes and games in the São Paulo and Brazilian <span class="nb">U-17</span> championships. Minutes per goal = minutes played ÷ goals.</span><span class="i es">Goles, minutos y partidos de 2026 en el Paulista y el <span class="nb">Brasileiro Sub-17</span>. Minutos por gol = minutos jugados ÷ goles.</span></div>
+</div></section><section class="slide " id="universo" data-bg="chute" data-tbr="Como ele joga" data-cbr="Entre 19 atacantes Sub-17 da amostra coletada, é o 3º em gols, finalizações e toques na área por 90 minutos." data-tpt="Como ele joga" data-cpt="Entre 19 atacantes Sub-17 da amostra coletada, é o 3.º em golos, remates e toques na área por 90 minutos." data-ten="How he plays" data-cen="Among 19 under-17 centre-forwards in the collected sample, he is 3rd for goals, shots and touches in the box per 90 minutes." data-tes="Cómo juega" data-ces="Entre 19 delanteros Sub-17 de la muestra recogida, es el 3.º en goles, remates y toques en el área por 90 minutos.">
+<div class="wrap">
+  <div class="kick"><span class="i br">UNIVERSO COM COLETA</span><span class="i pt">UNIVERSO COM COLETA</span><span class="i en">COLLECTED SAMPLE</span><span class="i es">UNIVERSO CON RECOLECCIÓN</span></div>
+  <h2><span class="i br">Top 5 entre 19 atacantes: gols, finalizações e toques na área</span><span class="i pt">Top 5 entre 19 atacantes: golos, remates e toques na área</span><span class="i en">Top 5 of 19 forwards: goals, shots and touches in the box</span><span class="i es">Top 5 de 19 delanteros: goles, remates y toques en el área</span></h2>
+  <div class="ogt uni4"><div class="og h"><span class="i br">Métrica</span><span class="i pt">Métrica</span><span class="i en">Metric</span><span class="i es">Métrica</span></div><div class="og h onum"><span class="i br">Ícaro</span><span class="i pt">Ícaro</span><span class="i en">Ícaro</span><span class="i es">Ícaro</span></div><div class="og h onum"><span class="i br">Med.</span><span class="i pt">Med.</span><span class="i en">Med.</span><span class="i es">Med.</span></div><div class="og h onum"><span class="i br">Pos.</span><span class="i pt">Pos.</span><span class="i en">Rank</span><span class="i es">Pos.</span></div><div class="og"><span class="i br">Gols por 90 min</span><span class="i pt">Golos por 90 min</span><span class="i en">Goals per 90 min</span><span class="i es">Goles por 90 min</span></div><div class="og onum"><b><span class="i br">0,58</span><span class="i pt">0,58</span><span class="i en">0.58</span><span class="i es">0,58</span></b></div><div class="og onum"><span class="i br">0,25</span><span class="i pt">0,25</span><span class="i en">0.25</span><span class="i es">0,25</span></div><div class="og onum"><span class="i br">3º</span><span class="i pt">3.º</span><span class="i en">3rd</span><span class="i es">3.º</span><small>/19</small></div><div class="og"><span class="i br">Finalizações por 90 min</span><span class="i pt">Remates por 90 min</span><span class="i en">Shots per 90 min</span><span class="i es">Remates por 90 min</span></div><div class="og onum"><b><span class="i br">3,55</span><span class="i pt">3,55</span><span class="i en">3.55</span><span class="i es">3,55</span></b></div><div class="og onum"><span class="i br">2,38</span><span class="i pt">2,38</span><span class="i en">2.38</span><span class="i es">2,38</span></div><div class="og onum"><span class="i br">3º</span><span class="i pt">3.º</span><span class="i en">3rd</span><span class="i es">3.º</span><small>/19</small></div><div class="og"><span class="i br">Toques na área por 90 min</span><span class="i pt">Toques na área por 90 min</span><span class="i en">Touches in the box per 90 min</span><span class="i es">Toques en el área por 90 min</span></div><div class="og onum"><b><span class="i br">5,04</span><span class="i pt">5,04</span><span class="i en">5.04</span><span class="i es">5,04</span></b></div><div class="og onum"><span class="i br">2,54</span><span class="i pt">2,54</span><span class="i en">2.54</span><span class="i es">2,54</span></div><div class="og onum"><span class="i br">3º</span><span class="i pt">3.º</span><span class="i en">3rd</span><span class="i es">3.º</span><small>/19</small></div><div class="og"><span class="i br">Gols esperados por 90 min</span><span class="i pt">Golos esperados por 90 min</span><span class="i en">Expected goals per 90 min</span><span class="i es">Goles esperados por 90 min</span></div><div class="og onum"><b><span class="i br">0,47</span><span class="i pt">0,47</span><span class="i en">0.47</span><span class="i es">0,47</span></b></div><div class="og onum"><span class="i br">0,33</span><span class="i pt">0,33</span><span class="i en">0.33</span><span class="i es">0,33</span></div><div class="og onum"><span class="i br">5º</span><span class="i pt">5.º</span><span class="i en">5th</span><span class="i es">5.º</span><small>/19</small></div><div class="og"><span class="i br">Dribles por 90 min</span><span class="i pt">Dribles por 90 min</span><span class="i en">Dribbles per 90 min</span><span class="i es">Regates por 90 min</span></div><div class="og onum"><b><span class="i br">2,81</span><span class="i pt">2,81</span><span class="i en">2.81</span><span class="i es">2,81</span></b></div><div class="og onum"><span class="i br">2,09</span><span class="i pt">2,09</span><span class="i en">2.09</span><span class="i es">2,09</span></div><div class="og onum"><span class="i br">5º</span><span class="i pt">5.º</span><span class="i en">5th</span><span class="i es">5.º</span><small>/19</small></div></div>
+  <div class="nota"><span class="i br"><b>Comparação limitada:</b> só entram atacantes <span class="nb">Sub-17</span> do Brasileiro 2026 (posição principal centroavante na Wyscout) que a coleta alcançou, com 450+ minutos nos jogos coletados. Não são todos os jogos de cada jogador, e Ícaro entra com 15 dos 20 jogos dele. Por 90 minutos; Med. = mediana; * empatado. Só as métricas em que ele está entre os 5 primeiros.</span><span class="i pt"><b>Comparação limitada:</b> só entram atacantes <span class="nb">Sub-17</span> do Brasileiro 2026 (posição principal centroavante na Wyscout) que a coleta alcançou, com 450+ minutos nos jogos coletados. Não são todos os jogos de cada jogador, e Ícaro entra com 15 dos 20 jogos dele. Por 90 minutos; Med. = mediana; * empatado. Só as métricas em que ele está entre os 5 primeiros.</span><span class="i en"><b>Limited comparison:</b> only <span class="nb">under-17</span> forwards from the 2026 Brazilian championship (main position <span class="nb">centre-forward</span> in Wyscout) that the collection reached, with 450+ minutes in the games collected. These are not every game of each player, and Ícaro is in with 15 of his 20 games. Per 90 minutes; Med. = median; * tied. Only the metrics where he ranks in the top 5.</span><span class="i es"><b>Comparación limitada:</b> solo entran delanteros <span class="nb">Sub-17</span> del Brasileiro 2026 (posición principal delantero centro en Wyscout) que alcanzó la recolección, con 450+ minutos en los partidos recogidos. No son todos los partidos de cada jugador, e Ícaro entra con 15 de sus 20 partidos. Por 90 minutos; Med. = mediana; * empatado. Solo las métricas en que está entre los 5 primeros.</span></div>
+</div></section><section class="slide " id="lances" data-bg="chute" data-tbr="Os lances" data-cbr="O vídeo completo dos lances de Ícaro em 2026." data-tpt="Os lances" data-cpt="O vídeo completo dos lances de Ícaro em 2026." data-ten="The plays" data-cen="The full video of Ícaro&#x27;s plays in 2026." data-tes="Las jugadas" data-ces="El vídeo completo de las jugadas de Ícaro en 2026.">
+<div class="wrap">
+  <div class="kick"><span class="i br">OS LANCES</span><span class="i pt">OS LANCES</span><span class="i en">THE PLAYS</span><span class="i es">LAS JUGADAS</span></div>
+  <h2><span class="i br">Os gols e as jogadas de 2026</span><span class="i pt">Os golos e as jogadas de 2026</span><span class="i en">The goals and plays of 2026</span><span class="i es">Los goles y las jugadas de 2026</span></h2>
+  <div class="vp on" data-k="geral"><div class="vbox"><video preload="none" playsinline webkit-playsinline poster="assets/videos/icaro_lances_poster.jpg" src="assets/videos/icaro_completo.mp4"></video><button class="vplay" aria-label="play"></button>
+    <button class="vfs" aria-label="fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    <div class="vbar"><i></i></div></div></div>
+  <p class="lead" style="font-size:calc(26px*var(--k,1))"><span class="i br">O vídeo completo, do começo ao fim, com imagens das transmissões. O botão de tela cheia fica no canto do vídeo.</span><span class="i pt">O vídeo completo, do começo ao fim, com imagens das transmissões. O botão de ecrã inteiro fica no canto do vídeo.</span><span class="i en">The full video, start to finish, from the broadcasts. The full-screen button sits in the corner of the video.</span><span class="i es">El vídeo completo, de principio a fin, con imágenes de las transmisiones. El botón de pantalla completa está en la esquina del vídeo.</span></p>
+  <div class="ctx"><span class="i br">TROFÉUS DE 2026</span><span class="i pt">TROFÉUS DE 2026</span><span class="i en">2026 TROPHIES</span><span class="i es">TROFEOS DE 2026</span></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:calc(18px*var(--k,1) + var(--gx,0px));flex:none">
+    <div><div class="fph" style="height:calc(430px*var(--k,1));background-image:url(assets/fotos/comemora.jpg);background-size:cover;background-position:50% 20%;animation:none"></div><div class="nota" style="margin-top:calc(8px*var(--k,1))"><span class="i br"><span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> · campeão e artilheiro</span><span class="i pt"><span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> · campeão e artilheiro</span><span class="i en"><span class="nb">Copa Fictor</span> <span class="nb">U-17</span> · champion and top scorer</span><span class="i es"><span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> · campeón y goleador</span></div></div>
+    <div><div class="fph" style="height:calc(430px*var(--k,1));background-image:url(assets/fotos/nijmegen.jpg);background-size:cover;background-position:50% 40%;animation:none"></div><div class="nota" style="margin-top:calc(8px*var(--k,1))"><span class="i br">Nexperia Nijmegen Cup · campeão</span><span class="i pt">Nexperia Nijmegen Cup · campeão</span><span class="i en">Nexperia Nijmegen Cup · champion</span><span class="i es">Nexperia Nijmegen Cup · campeón</span></div></div>
+  </div>
+</div></section><section class="slide " id="leitura" data-bg="chute" data-tbr="Leitura 4ComM" data-cbr="O que entrega hoje e para quem encaixa." data-tpt="Leitura 4ComM" data-cpt="O que entrega hoje e para quem encaixa." data-ten="4ComM view" data-cen="What he delivers today and where he fits." data-tes="Lectura 4ComM" data-ces="Lo que ofrece hoy y para quién encaja.">
+<div class="wrap">
+  <div class="kick"><span class="i br">LEITURA <span class="m">4ComM</span></span><span class="i pt">LEITURA <span class="m">4ComM</span></span><span class="i en"><span class="m">4ComM</span> VIEW</span><span class="i es">LECTURA <span class="m">4ComM</span></span></div>
+  <h2><span class="i br">O que entrega hoje e para quem encaixa</span><span class="i pt">O que entrega hoje e para quem encaixa</span><span class="i en">What he delivers today and where he fits</span><span class="i es">Qué entrega hoy y a quién le encaja</span></h2>
+  <div class="g3 lcs"><div class="xw gcard lc"><button class="xc" type="button"><span class="ig"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="36" r="4"/><circle cx="36" cy="12" r="4"/><path d="M15 33C22 28 26 20 33 15"/></svg></span><div class="gtx"><div class="gt"><span class="i br">Faz gol</span><span class="i pt">Faz golo</span><span class="i en">Scores</span><span class="i es">Marca</span></div><div class="gs"><span class="i br">19 gols nas competições de federação</span><span class="i pt">19 golos nas competições de federação</span><span class="i en">19 goals in the federation competitions</span><span class="i es">19 goles en las competiciones de federación</span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br">Faz gol</span><span class="i pt">Faz golo</span><span class="i en">Scores</span><span class="i es">Marca</span></div><p class="pb"><span class="i br"><b>Faz gol:</b> 9 gols em 20 jogos no <span class="nb">Brasileiro Sub-17</span> e 10 em 11 no <span class="nb">Paulista Sub-17</span>, em 13 jogos diferentes, com 2 hat-tricks. Um gol a cada 95 minutos.</span><span class="i pt"><b>Faz golo:</b> 9 golos em 20 jogos no <span class="nb">Brasileiro Sub-17</span> e 10 em 11 no <span class="nb">Paulista Sub-17</span>, em 13 jogos diferentes, com 2 hat-tricks. Um golo a cada 95 minutos.</span><span class="i en"><b>Scores:</b> 9 goals in 20 games in the Brazilian <span class="nb">U-17</span> and 10 in 11 in the São Paulo <span class="nb">U-17</span>, in 13 different games, with 2 hat-tricks. One goal every 95 minutes.</span><span class="i es"><b>Marca:</b> 9 goles en 20 partidos en el <span class="nb">Brasileiro Sub-17</span> y 10 en 11 en el <span class="nb">Paulista Sub-17</span>, en 13 partidos distintos, con 2 hat-tricks. Un gol cada 95 minutos.</span></p></div></div><div class="xw gcard lc"><button class="xc" type="button"><span class="ig"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 38c8 0 8-14 16-14s8 14 16 14"/><circle cx="24" cy="12" r="4"/></svg></span><div class="gtx"><div class="gt"><span class="i br">Chega a finalizar</span><span class="i pt">Chega a finalizar</span><span class="i en">Gets shots away</span><span class="i es">Llega a rematar</span></div><div class="gs"><span class="i br">3º em finalizações e toques na área</span><span class="i pt">3.º em remates e toques na área</span><span class="i en">3rd for shots and touches in the box</span><span class="i es">3.º en remates y toques en el área</span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br">Chega a finalizar</span><span class="i pt">Chega a finalizar</span><span class="i en">Gets shots away</span><span class="i es">Llega a rematar</span></div><p class="pb"><span class="i br"><b>Chega a finalizar:</b> 3,5 finalizações e 5,0 toques na área por 90 minutos, 3º nas duas no universo coletado (19 atacantes <span class="nb">Sub-17</span>).</span><span class="i pt"><b>Chega a finalizar:</b> 3,5 remates e 5,0 toques na área por 90 minutos, 3.º nas duas no universo coletado (19 atacantes <span class="nb">Sub-17</span>).</span><span class="i en"><b>Gets shots away:</b> 3.5 shots and 5.0 touches in the box per 90 minutes, 3rd in both in the collected sample (19 <span class="nb">under-17</span> forwards).</span><span class="i es"><b>Llega a rematar:</b> 3,5 remates y 5,0 toques en el área por 90 minutos, 3.º en ambos en el universo recogido (19 delanteros <span class="nb">Sub-17</span>).</span></p></div></div><div class="xw gcard lc"><button class="xc" type="button"><span class="ig"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 36l24-24M30 12h6v6"/><path d="M12 12l6 6"/></svg></span><div class="gtx"><div class="gt"><span class="i br">Título e artilharia</span><span class="i pt">Título e artilharia</span><span class="i en">Title and top scorer</span><span class="i es">Título y goleador</span></div><div class="gs"><span class="i br">campeão e artilheiro da <span class="nb">Copa Fictor</span></span><span class="i pt">campeão e artilheiro da <span class="nb">Copa Fictor</span></span><span class="i en">champion and top scorer of the <span class="nb">Copa Fictor</span></span><span class="i es">campeón y goleador de la <span class="nb">Copa Fictor</span></span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br">Título e artilharia</span><span class="i pt">Título e artilharia</span><span class="i en">Title and top scorer</span><span class="i es">Título y goleador</span></div><p class="pb"><span class="i br"><b>Título e artilharia:</b> 4 gols em 4 jogos na <span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> (janeiro), com o título e a artilharia. Campeão também da Nexperia Nijmegen Cup, na Holanda, e do Paulista <span class="nb">Sub-15</span> de 2024.</span><span class="i pt"><b>Título e artilharia:</b> 4 golos em 4 jogos na <span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> (janeiro), com o título e a artilharia. Campeão também da Nexperia Nijmegen Cup, na Holanda, e do Paulista <span class="nb">Sub-15</span> de 2024.</span><span class="i en"><b>Title and top scorer:</b> 4 goals in 4 games at the <span class="nb">Copa Fictor</span> <span class="nb">U-17</span> (January), with the title and the top-scorer award. Also champion of the Nexperia Nijmegen Cup in the Netherlands and of the 2024 São Paulo <span class="nb">U-15</span> Championship.</span><span class="i es"><b>Título y goleador:</b> 4 goles en 4 partidos en la <span class="nb">Copa Fictor</span> <span class="nb">Sub-17</span> (enero), con el título y la goleada. También campeón de la Nexperia Nijmegen Cup, en los Países Bajos, y del Paulista <span class="nb">Sub-15</span> de 2024.</span></p></div></div><div class="xw gcard lc"><button class="xc" type="button"><span class="ig"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8v18l-6 14M30 8v18l6 14"/><path d="M12 40h8M28 40h8"/></svg></span><div class="gtx"><div class="gt"><span class="i br">Joga com o pé direito</span><span class="i pt">Joga com o pé direito</span><span class="i en">Right-footed</span><span class="i es">Juega con el pie derecho</span></div><div class="gs"><span class="i br">destro, 1,81 m</span><span class="i pt">destro, 1,81 m</span><span class="i en">right-footed, 1.81 m</span><span class="i es">diestro, 1,81 m</span></div></div><i class="plus" aria-hidden="true"></i></button><div class="xp"><div class="ptt"><span class="i br">Joga com o pé direito</span><span class="i pt">Joga com o pé direito</span><span class="i en">Right-footed</span><span class="i es">Juega con el pie derecho</span></div><p class="pb"><span class="i br"><b>Destro, 1,81 m:</b> atacante de referência do time, com a camisa 9.</span><span class="i pt"><b>Destro, 1,81 m:</b> atacante de referência da equipa, com a camisola 9.</span><span class="i en"><b>Right-footed, 1.81 m:</b> the team's reference forward, wearing the number 9.</span><span class="i es"><b>Diestro, 1,81 m:</b> delantero de referencia del equipo, con el dorsal 9.</span></p></div></div></div>
+  <div class="fit"><span class="i br"><b>Encaixe:</b> atacante de referência para equipes que querem um jogador que chega à finalização e converte, na transição do <span class="nb">Sub-17</span> para o <span class="nb">Sub-20</span>: 19 gols nas competições de federação, 3º em finalizações e toques na área entre 19 atacantes da amostra.</span><span class="i pt"><b>Encaixe:</b> atacante de referência para equipas que querem um jogador que chega à remate e converte, na transição do <span class="nb">Sub-17</span> para o <span class="nb">Sub-20</span>: 19 golos nas competições de federação, 3.º em remates e toques na área entre 19 atacantes da amostra.</span><span class="i en"><b>Fit:</b> a reference forward for teams that want a player who gets shots away and converts them, in the step up from <span class="nb">under-17s</span> to under-20s: 19 goals in the federation competitions, 3rd for shots and touches in the box among 19 forwards in the sample.</span><span class="i es"><b>Encaje:</b> delantero de referencia para equipos que quieren a alguien que llega al remate y convierte, en el paso del <span class="nb">Sub-17</span> al <span class="nb">Sub-20</span>: 19 goles en las competiciones de federación, 3.º en remates y toques en el área entre 19 delanteros de la muestra.</span></div>
+  <div class="nota"><span class="i br">Gols, minutos e jogos: todos os jogos do Paulista e do <span class="nb">Brasileiro Sub-17</span> de 2026. Posições em finalizações e toques na área: universo com coleta (19 atacantes <span class="nb">Sub-17</span>, amostra parcial de jogos).</span><span class="i pt">Golos, minutos e jogos: todos os jogos do Paulista e do <span class="nb">Brasileiro Sub-17</span> de 2026. Posições em remates e toques na área: universo com coleta (19 atacantes <span class="nb">Sub-17</span>, amostra parcial de jogos).</span><span class="i en">Goals, minutes and games: every 2026 game in the São Paulo and Brazilian <span class="nb">U-17</span> championships. Ranks for shots and touches in the box: collected sample (19 <span class="nb">under-17</span> forwards, partial sample of games).</span><span class="i es">Goles, minutos y partidos: todos los partidos del Paulista y del <span class="nb">Brasileiro Sub-17</span> de 2026. Puestos en remates y toques en el área: universo con recolección (19 delanteros <span class="nb">Sub-17</span>, muestra parcial de partidos).</span></div>
+</div></section><section class="slide " id="contato" data-bg="comemora" data-tbr="Contato" data-cbr="Contato da 4ComM." data-tpt="Contacto" data-cpt="Contacto da 4ComM." data-ten="Contact" data-cen="4ComM contact." data-tes="Contacto" data-ces="Contacto de la 4ComM.">
+<div class="wrap ctw">
+  <img class="clogo" src="assets/logo4comm-white.png" alt="4ComM">
+  <div class="kick"><span class="i br">CONTATO</span><span class="i pt">CONTACTO</span><span class="i en">CONTACT</span><span class="i es">CONTACTO</span></div>
+  <h2><span class="i br">Fale com a 4ComM</span><span class="i pt">Fale com a 4ComM</span><span class="i en">Talk to 4ComM</span><span class="i es">Habla con la 4ComM</span></h2>
+  <p class="t t1"><span class="i br">Júnior Pedroso · CEO da 4ComM</span><span class="i pt">Júnior Pedroso · CEO da 4ComM</span><span class="i en">Júnior Pedroso · 4ComM CEO</span><span class="i es">Júnior Pedroso · CEO de la 4ComM</span><br>
+    <a href="https://wa.me/5511983500878" target="_blank" rel="noopener" style="color:var(--gold2)">+55 11 98350-0878</a> · <a href="mailto:junior@4comm.com.br" style="color:var(--gold2)">junior@4comm.com.br</a></p>
+  <div class="nota"><span class="i br">4ComM · São Paulo, Brasil · Material preparado para avaliação de clubes.</span><span class="i pt">4ComM · São Paulo, Brasil · Material preparado para avaliação de clubes.</span><span class="i en">4ComM · São Paulo, Brazil · Material prepared for club assessment.</span><span class="i es">4ComM · São Paulo, Brasil · Material preparado para la evaluación de clubes.</span></div>
+</div></section><section class="slide " id="fontes" data-bg="sorriso" data-tbr="Fontes e método" data-cbr="Fontes e método. Números de 2026 conferidos em 02/11/2026." data-tpt="Fontes e método" data-cpt="Fontes e método. Números de 2026 conferidos em 02/11/2026." data-ten="Sources and method" data-cen="Sources and method. 2026 numbers checked on 2 Nov 2026." data-tes="Fuentes y método" data-ces="Fuentes y método. Números de 2026 comprobados el 02/11/2026.">
+<div class="wrap">
+  <div class="kick"><span class="i br">FONTES E MÉTODO</span><span class="i pt">FONTES E MÉTODO</span><span class="i en">SOURCES AND METHOD</span><span class="i es">FUENTES Y MÉTODO</span></div>
+  <h2><span class="i br">De onde vem cada número</span><span class="i pt">De onde vem cada número</span><span class="i en">Where the numbers come from</span><span class="i es">De dónde sale cada número</span></h2>
+  <div class="seal"><span class="i br">Números conferidos em 02/11/2026</span><span class="i pt">Números conferidos em 02/11/2026</span><span class="i en">Numbers checked on 2 Nov 2026</span><span class="i es">Números comprobados el 02/11/2026</span></div>
+  <ul class="src">
+    <li><span class="i br"><b>Jogos, minutos e gols de 2026</b> (Paulista e <span class="nb">Brasileiro Sub-17</span>): oGol, conferido com a CBF no <span class="nb">Brasileiro Sub-17</span> (20 jogos e 9 gols). <b>Minuto de cada gol e titularidades:</b> fichas de jogo do oGol. <b>Média por 90 minutos:</b> gols ÷ minutos em campo × 90. <b>Minutos por gol:</b> minutos em campo ÷ gols.</span><span class="i pt"><b>Jogos, minutos e golos de 2026</b> (Paulista e <span class="nb">Brasileiro Sub-17</span>): oGol, conferido com a CBF no <span class="nb">Brasileiro Sub-17</span> (20 jogos e 9 golos). <b>Minuto de cada golo e titularidades:</b> fichas de jogo do oGol. <b>Média por 90 minutos:</b> golos ÷ minutos em campo × 90. <b>Minutos por golo:</b> minutos em campo ÷ golos.</span><span class="i en"><b>2026 games, minutes and goals</b> (São Paulo and Brazilian <span class="nb">U-17</span>): oGol, checked against the CBF for the Brazilian <span class="nb">U-17</span> (20 games and 9 goals). <b>Minute of each goal and starts:</b> oGol match pages. <b>Per-90 average:</b> goals ÷ minutes played × 90. <b>Minutes per goal:</b> minutes played ÷ goals.</span><span class="i es"><b>Partidos, minutos y goles de 2026</b> (Paulista y <span class="nb">Brasileiro Sub-17</span>): oGol, contrastado con la CBF en el <span class="nb">Brasileiro Sub-17</span> (20 partidos y 9 goles). <b>Minuto de cada gol y titularidades:</b> fichas de partido de oGol. <b>Promedio por 90 minutos:</b> goles ÷ minutos jugados × 90. <b>Minutos por gol:</b> minutos jugados ÷ goles.</span></li>
+    <li><span class="i br"><b>Copa Fictor e Nexperia Nijmegen Cup:</b> site oficial do Palmeiras (29/01 e 26/04/2026) e Instagram do atleta. <b>Copa Ibrachina:</b> Sofascore (4 jogos, 267 minutos, 1 gol). Estas competições entram à parte, sem somar ao subtotal. <b>Ficha:</b> Sofascore (altura, pé, camisa) e oGol (nascimento). <b>Trajetória:</b> oGol; título do Paulista <span class="nb">Sub-15</span> de 2024: informação da 4ComM, a conferir.</span><span class="i pt"><b>Copa Fictor e Nexperia Nijmegen Cup:</b> site oficial do Palmeiras (29/01 e 26/04/2026) e Instagram do atleta. <b>Copa Ibrachina:</b> Sofascore (4 jogos, 267 minutos, 1 golo). Estas competições entram à parte, sem somar ao subtotal. <b>Ficha:</b> Sofascore (altura, pé, camisola) e oGol (nascimento). <b>Trajetória:</b> oGol; título do Paulista <span class="nb">Sub-15</span> de 2024: informação da 4ComM, a conferir.</span><span class="i en"><b>Copa Fictor and Nexperia Nijmegen Cup:</b> Palmeiras' official website (29 Jan and 26 Apr 2026) and the player's Instagram. <b>Copa Ibrachina:</b> Sofascore (4 games, 267 minutes, 1 goal). These competitions are shown separately, not added to the subtotal. <b>Player file:</b> Sofascore (height, foot, shirt number) and oGol (date of birth). <b>Career path:</b> oGol; 2024 São Paulo <span class="nb">U-15</span> title: 4ComM information, to be confirmed.</span><span class="i es"><b>Copa Fictor y Nexperia Nijmegen Cup:</b> web oficial del Palmeiras (29/01 y 26/04/2026) e Instagram del atleta. <b>Copa Ibrachina:</b> Sofascore (4 partidos, 267 minutos, 1 gol). Estas competiciones van aparte, sin sumarse al subtotal. <b>Ficha:</b> Sofascore (altura, pie, dorsal) y oGol (nacimiento). <b>Trayectoria:</b> oGol; título del Paulista <span class="nb">Sub-15</span> de 2024: información de la 4ComM, por confirmar.</span></li>
+    <li><span class="i br"><b>Comparação (universo com coleta):</b> Wyscout, planilhas da 4ComM. Reúne os atacantes (posição principal centroavante) de equipes <span class="nb">Sub-17</span> do Brasileiro 2026 que a coleta alcançou, com 450+ minutos nos jogos coletados: 19 jogadores. A coleta não tem todos os jogos de cada jogador: Ícaro entra com 15 dos 20 jogos dele (1.089 minutos). Posição = 1 + quantos jogadores estão estritamente à frente; * empatado. A Opta não cobre estas competições.</span><span class="i pt"><b>Comparação (universo com coleta):</b> Wyscout, planilhas da 4ComM. Reúne os atacantes (posição principal centroavante) de equipas <span class="nb">Sub-17</span> do Brasileiro 2026 que a coleta alcançou, com 450+ minutos nos jogos coletados: 19 jogadores. A coleta não tem todos os jogos de cada jogador: Ícaro entra com 15 dos 20 jogos dele (1.089 minutos). Posição = 1 + quantos jogadores estão estritamente à frente; * empatado. A Opta não cobre estas competições.</span><span class="i en"><b>Comparison (collected sample):</b> Wyscout, 4ComM spreadsheets. It gathers the centre-forwards (main position <span class="nb">centre-forward</span>) of <span class="nb">under-17</span> sides in the 2026 Brazilian championship that the collection reached, with 450+ minutes in the games collected: 19 players. The collection does not have every game of every player: Ícaro is in with 15 of his 20 games (1,089 minutes). Rank = 1 + the number of players strictly ahead; * tied. Opta does not cover these competitions.</span><span class="i es"><b>Comparación (universo con recolección):</b> Wyscout, hojas de la 4ComM. Reúne a los delanteros (posición principal delantero centro) de equipos <span class="nb">Sub-17</span> del Brasileiro 2026 que alcanzó la recolección, con 450+ minutos en los partidos recogidos: 19 jugadores. La recolección no tiene todos los partidos de cada jugador: Ícaro entra con 15 de sus 20 partidos (1.089 minutos). Puesto = 1 + jugadores estrictamente por delante; * empatado. Opta no cubre estas competiciones.</span></li>
+    <li><span class="i br"><b>Vídeo:</b> imagens das transmissões e da TV Palmeiras, editadas por terceiros (Nordeste Editions), em vídeo de 30/10/2026. <b>Hat-tricks:</b> 04/06 (Vitória) e 18/07 (União Mogi), conforme as fichas de jogo.</span><span class="i pt"><b>Vídeo:</b> imagens das transmissões e da TV Palmeiras, editadas por terceiros (Nordeste Editions), em vídeo de 30/10/2026. <b>Hat-tricks:</b> 04/06 (Vitória) e 18/07 (União Mogi), conforme as fichas de jogo.</span><span class="i en"><b>Video:</b> broadcast and TV Palmeiras footage, edited by a third party (Nordeste Editions), in a video dated 30 Oct 2026. <b>Hat-tricks:</b> 4 Jun (Vitória) and 18 Jul (União Mogi), as per the match pages.</span><span class="i es"><b>Vídeo:</b> imágenes de las transmisiones y de la TV Palmeiras, editadas por terceros (Nordeste Editions), en un vídeo del 30/10/2026. <b>Hat-tricks:</b> 04/06 (Vitória) y 18/07 (União Mogi), según las fichas de partido.</span></li>
+  </ul>
+</div></section>
+<div class="pnl"><div class="pbk"></div><div class="pbx"><button class="px" aria-label="Fechar">×</button><div class="pbody"></div></div></div>
+</div><button class="edge p" aria-label="Anterior"><svg viewBox="0 0 12 44" aria-hidden="true"><path d="M10 4 2 22 10 40"/></svg></button><button class="edge n" aria-label="Próxima"><svg viewBox="0 0 12 44" aria-hidden="true"><path d="M2 4 10 22 2 40"/></svg></button></div>
+<button class="nav n" aria-label="Próxima">›</button></div>
+<footer class="cap"><b class="ct"></b><a class="dl"><span class="i br">Baixar PNG</span><span class="i pt">Descarregar PNG</span><span class="i en">Download PNG</span><span class="i es">Descargar PNG</span></a><span class="t"></span></footer>
+</div>
+<script>(function(){
+ var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+ var root=document.documentElement,slides=$$('.slide'),n=slides.length,cur=-1;
+ var bars=$('.bars'),cnt=$('.cnt'),frame=$('.frame'),bg=$('.bgblur'),cap=$('.cap'),ct=$('.cap .ct'),ctx=$('.cap .t'),dl=$('.cap .dl'),prev=$('.nav.p'),next=$('.nav.n'),ep=$('.edge.p'),en=$('.edge.n');
+ var pnl=$('.pnl'),pbody=$('.pbody');
+ var EXPORT=/[?&]x=1/.test(location.search);if(EXPORT)root.classList.add('x');
+ var REDUZ=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
+ function lang(){return root.getAttribute('data-lang')||'br'}
+ var HL={br:'pt-BR',pt:'pt-PT',en:'en',es:'es'};
+ function pad(i){return (i<10?'0':'')+i}
+ var MQ=window.matchMedia('(max-width:760px)');
+ function isM(){return !EXPORT&&MQ.matches}
+ /* modo celular: o palco tem 1080 px de largura e a altura da tela; cada tela escolhe o maior --k (medidas verticais) que ainda cabe */
+ function fitK(){
+  var sl=slides[cur];if(!sl)return;
+  var w=sl.querySelector('.wrap'),st=root.style,ph=root.classList.contains('ph');
+  st.setProperty('--gx','0px');st.setProperty('--fmin',ph?'31px':'0px');
+  if(!w||sl.classList.contains('cover')){st.setProperty('--k',1);return}
+  sl.classList.add('meas');
+  /* tela de lances: o --k tem de servir para todas as abas (a lista de capítulos muda de tamanho); os mapas resolvem isso no CSS */
+  var V=vistas(sl);
+  var el=[].slice.call(w.querySelectorAll('*')).filter(function(e){return !e.closest('svg')&&e.children.length===0});
+  function cabe(){
+   if(w.scrollHeight>w.clientHeight+1||w.scrollWidth>w.clientWidth+1)return false;
+   return !el.some(function(e){return e.offsetParent!==null&&e.scrollWidth>e.clientWidth+2&&getComputedStyle(e).display!=='inline'})}
+  function ok(k){st.setProperty('--k',k);if(!V)return cabe();for(var v=0;v<V.n;v++){V.set(v);if(!cabe())return false}return true}
+  var lo=1,hi=2.4;
+  /* letra mínima no celular: 31 px de palco (cerca de 11 px reais num celular de 390 px); só baixa na tela que não couber */
+  if(ph){var FM=[31,27,23,0];for(var f=0;f<FM.length;f++){st.setProperty('--fmin',FM[f]+'px');if(ok(1))break}}
+  if(!ok(1)){st.setProperty('--k',1);if(V)V.back();sl.classList.remove('meas');return}
+  for(var i=0;i<8;i++){var mid=(lo+hi)/2;if(ok(mid))lo=mid;else hi=mid}
+  ok(lo);
+  var kids=[].filter.call(w.children,function(e){return getComputedStyle(e).position!=='absolute'&&e.offsetParent!==null}),last=kids[kids.length-1];
+  if(last&&kids.length>1){
+   var sobra=w.clientHeight-(last.offsetTop+last.offsetHeight);
+   if(sobra>8){var g=Math.floor(sobra/(kids.length-1))-1;st.setProperty('--gx',g+'px');if(!ok(lo)){st.setProperty('--gx','0px')}}
+  }
+  for(var j=0;j<20&&!ok(lo);j++){lo-=.02;st.setProperty('--gx','0px')}
+  if(V)V.back();
+  sl.classList.remove('meas');
+ }
+ function vistas(sl){
+  var ps=$$('.vp',sl);
+  if(ps.length>1){var p0=$('.vp.on',sl);return {n:ps.length,set:function(i){ps.forEach(function(p,j){p.classList.toggle('on',j===i)})},back:function(){ps.forEach(function(p){p.classList.toggle('on',p===p0)})}}}
+  return null;
+ }
+ function fit(){
+  var ph=isM();root.classList.add('m');root.classList.toggle('ph',ph);
+  var st=root.style;
+  if(EXPORT){st.setProperty('--s',1);st.setProperty('--H',1920);root.classList.add('short')}
+  else if(ph){
+   var vw=innerWidth,vh=innerHeight,s=vw/1080;
+   st.setProperty('--s',s.toFixed(5));st.setProperty('--H',(vh/s).toFixed(1));root.classList.toggle('short',vh/s<2000);st.setProperty('--vh',vh+'px');
+  }else{
+   var vw=innerWidth,vh=innerHeight,top=$('.chrome').offsetHeight,cp=cap.offsetHeight;
+   var avW=vw-(vw>760?240:0),avH=vh-top-cp-10;
+   st.setProperty('--H',1920);root.classList.add('short');
+   st.setProperty('--s',Math.max(.15,Math.min(avW/1080,avH/1920)).toFixed(4));
+  }
+  fitK();
+ }
+ /* números que sobem até o valor quando a tela abre; o texto final sai no idioma da página */
+ function fmt(v,d,l,suf){var p=v.toFixed(d).split('.'),th=l==='en'?',':'.',dc=l==='en'?'.':',';return p[0].replace(/\B(?=(\d{3})+(?!\d))/g,th)+(p[1]?dc+p[1]:'')+suf}
+ function fillNums(scope){$$('.up',scope).forEach(function(e){e.textContent=fmt(+e.dataset.v,+e.dataset.d||0,lang(),e.dataset.s||'')})}
+ function countUp(scope){
+  if(EXPORT||REDUZ)return;
+  $$('.up',scope).forEach(function(e){
+   var v=+e.dataset.v,d=+e.dataset.d||0,s=e.dataset.s||'',t0=null,L=lang();
+   function step(t){if(t0===null)t0=t;var p=Math.min(1,(t-t0)/950),q=1-Math.pow(1-p,3);e.textContent=fmt(v*q,d,L,s);if(p<1)requestAnimationFrame(step);else e.textContent=fmt(v,d,L,s)}
+   e.textContent=fmt(0,d,L,s);requestAnimationFrame(step)})
+ }
+ slides.forEach(function(_,i){var b=document.createElement('i');b.onclick=function(e){e.stopPropagation();go(i)};bars.appendChild(b)});
+ function caption(){
+  var s=slides[cur],l=lang();
+  ct.textContent=(cur+1)+' / '+n+' · '+s.dataset['t'+l];
+  ctx.textContent=s.dataset['c'+l];
+  dl.href='png/icaro_'+pad(cur+1)+'_'+l+'.png';dl.setAttribute('download','icaro_'+pad(cur+1)+'_'+l+'.png');
+ }
+ /* painel que abre sobre a tela */
+ function openP(xw){var xp=$('.xp',xw);if(!xp)return;pbody.innerHTML=xp.innerHTML;pnl.classList.add('on');root.classList.add('pon');var bx=$('.pbx');bx.scrollTop=0}
+ function closeP(){pnl.classList.remove('on');root.classList.remove('pon');pbody.innerHTML=''}
+ function panelOn(){return pnl.classList.contains('on')}
+ function go(i){
+  if(i<0||i>=n||i===cur)return;cur=i;closeP();
+  var vs=$$('video');vs.forEach(function(v){if(!v.paused)v.pause()});
+  slides.forEach(function(s,k){s.classList.toggle('on',k===i)});
+  [].forEach.call(bars.children,function(b,k){b.className=k<i?'d':(k===i?'c':'')});
+  if(cnt)cnt.textContent=pad(i+1)+' / '+pad(n);
+  bg.style.backgroundImage='url(assets/fotos/'+slides[i].dataset.bg+'.jpg)';
+  prev.disabled=i===0;next.disabled=i===n-1;ep.disabled=i===0;en.disabled=i===n-1;
+  caption();fit();countUp(slides[i]);
+  try{history.replaceState(null,'','#'+(i+1)+(EXPORT?'':''))}catch(e){}
+ }
+ window.go=go;
+ prev.onclick=function(){go(cur-1)};next.onclick=function(){go(cur+1)};
+ ep.onclick=function(e){e.stopPropagation();go(cur-1)};en.onclick=function(e){e.stopPropagation();go(cur+1)};
+ document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){closeP();return}
+  if(panelOn()||document.fullscreenElement||document.webkitFullscreenElement)return;
+  if(e.key==='ArrowRight'||e.key==='PageDown'||(e.key===' '&&e.target.tagName!=='BUTTON'))go(cur+1);
+  if(e.key==='ArrowLeft'||e.key==='PageUp')go(cur-1);
+  if(e.key==='Home')go(0);if(e.key==='End')go(n-1);
+ });
+ frame.addEventListener('click',function(e){
+  var c=e.target.closest('.xc');
+  if(c){e.stopPropagation();openP(c.closest('.xw'));return}
+  if(e.target.closest('.pbk,.px')){closeP();return}
+  if(e.target.closest('a,button,.vts,.bars,.pnl,.mtabs,.mfls,.dt,.edge,.sc'))return;
+  if(window.getSelection&&String(window.getSelection()).length)return;
+  var r=frame.getBoundingClientRect(),x=(e.clientX-r.left)/r.width;
+  if(x>.62)go(cur+1);else if(x<.38)go(cur-1);
+ });
+ var tx=0,ty=0;
+ frame.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+ frame.addEventListener('touchend',function(e){if(panelOn()||e.target.closest('.sc,.vbox'))return;var dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.3)go(cur+(dx<0?1:-1))});
+ $$('.lang button').forEach(function(b){b.onclick=function(){
+  root.setAttribute('data-lang',b.getAttribute('data-l'));root.lang=HL[b.getAttribute('data-l')]||'pt-BR';
+  $$('.lang button').forEach(function(x){x.classList.toggle('on',x.getAttribute('data-l')===b.getAttribute('data-l'))});
+  try{localStorage.setItem('pp-lang',b.getAttribute('data-l'))}catch(e){}
+  fillNums(document);
+  if(cur>=0){caption();fit()}
+ }});
+ /* mapas: abas, filtros e a vista ativa (desenho e números) */
+ var svg=$('.heat');
+ function setView(v){if(!v)return;$$('.heat .mv,.mst .ms').forEach(function(g){g.classList.toggle('on',g.dataset.v===v)});if(svg)svg.setAttribute('data-v',v)}
+ $$('.mt').forEach(function(b){b.onclick=function(e){e.stopPropagation();var t=b.dataset.t;
+  $$('.mt').forEach(function(x){x.classList.toggle('on',x===b)});$$('.mfl').forEach(function(f){f.classList.toggle('on',f.dataset.t===t)});
+  var f=$('.mfl.on .mf.on');setView(t==='p'?'p-pos':(f?f.dataset.v:null))}});
+ $$('.mf').forEach(function(b){b.onclick=function(e){e.stopPropagation();$$('.mf',b.parentNode).forEach(function(x){x.classList.toggle('on',x===b)});setView(b.dataset.v)}});
+ setView('a-todas');
+ /* dispersão: um toque no ponto mostra quem é */
+ $$('.dt').forEach(function(b){b.onclick=function(e){e.stopPropagation();var was=b.classList.contains('on');$$('.dt.on').forEach(function(x){x.classList.remove('on')});if(!was)b.classList.add('on')}});
+ $$('.sc .plot').forEach(function(p){p.addEventListener('click',function(e){if(!e.target.closest('.dt'))$$('.dt.on').forEach(function(x){x.classList.remove('on')})})});
+ $$('.vt').forEach(function(b){b.onclick=function(e){e.stopPropagation();$$('.vp video').forEach(function(o){o.pause()});var k=b.dataset.k;$$('.vt').forEach(function(x){x.classList.toggle('on',x===b)});$$('.vp').forEach(function(p){p.classList.toggle('on',p.dataset.k===k)})}});
+ /* tela de lances: um vídeo por tipo, com os lances como capítulos */
+ $$('.vp').forEach(function(p){
+  var box=$('.vbox',p),v=$('video',box),bar=$('.vbar i',box),cs=$$('.vc',p),fs=$('.vfs',box);
+  function marca(){var t=v.currentTime,a=-1;cs.forEach(function(c,i){if(t>=parseFloat(c.dataset.t)-.05)a=i});cs.forEach(function(c,i){c.classList.toggle('on',i===a)})}
+  function alterna(){if(v.paused){$$('.vp video').forEach(function(o){if(o!==v)o.pause()});v.play()}else v.pause()}
+  box.onclick=function(e){e.stopPropagation();alterna()};
+  fs.onclick=function(e){e.stopPropagation();
+   var fe=document.fullscreenElement||document.webkitFullscreenElement;
+   if(fe){(document.exitFullscreen||document.webkitExitFullscreen).call(document);return}
+   var rq=box.requestFullscreen||box.webkitRequestFullscreen;
+   if(rq){rq.call(box)}else if(v.webkitEnterFullscreen){v.webkitEnterFullscreen()}
+  };
+  v.addEventListener('play',function(){box.classList.add('toca')});v.addEventListener('pause',function(){box.classList.remove('toca')});v.addEventListener('ended',function(){box.classList.remove('toca')});
+  v.addEventListener('timeupdate',function(){bar.style.width=(100*v.currentTime/(v.duration||1))+'%';marca()});
+  cs.forEach(function(c){c.onclick=function(e){e.stopPropagation();var go=function(){v.currentTime=parseFloat(c.dataset.t);v.play()};if(v.readyState<1){v.addEventListener('loadedmetadata',go,{once:true});v.load()}else go()}});
+ });
+ addEventListener('resize',fit);
+ var q=/[?&]l=(br|pt|en|es)/.exec(location.search);
+ if(q){root.setAttribute('data-lang',q[1]);root.lang=HL[q[1]];$$('.lang button').forEach(function(x){x.classList.toggle('on',x.getAttribute('data-l')===q[1])})}
+ else{try{var l=localStorage.getItem('pp-lang');if(l){var b=$('.lang button[data-l='+l+']');if(b)b.click()}}catch(e){}}
+ fillNums(document);
+ var h=parseInt((location.hash||'#1').slice(1),10);go(isNaN(h)?0:Math.min(Math.max(h-1,0),n-1));
+ if(document.fonts){document.fonts.ready.then(fit);document.fonts.addEventListener&&document.fonts.addEventListener('loadingdone',fit)}
+})();
+</script></body></html>
